@@ -49,3 +49,9 @@ function iTrib(num) {
     
     return current;
   }
+
+  // Testing the functions
+console.log(iSigma(4)); // Output: 10
+console.log(Factorial(3)); // Output: 6
+console.log(iFib(4)); // Output: 2
+console.log(iTrib(6)); // Output: 4
