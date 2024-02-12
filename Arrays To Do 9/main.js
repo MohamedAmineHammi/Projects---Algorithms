@@ -81,3 +81,24 @@ function findMedian(arr1, arr2) {
   // Example usage:
   const arr = [3, 0, 1];
   console.log(findMissingValue(arr)); // Output: 2
+
+  // To handle the case where the lowest value can be any integer (including negatives), you can modify the function as follows:
+
+  function findMissingValue(arr) {
+    const n = arr.length;
+    const sum = ((n - 1) * n) / 2;
+    let actualSum = 0;
+    
+    for (let i = 0; i < n; i++) {
+      actualSum += arr[i];
+    }
+    
+    return sum - actualSum;
+  }
+  
+  // Example usage:
+  const arr = [2, -4, 0, -3, -2, 1];
+  console.log(findMissingValue(arr)); // Output: -1
+  
+  const arr2 = [5, 2, 7, 8, 4, 9, 3];
+  console.log(findMissingValue(arr2)); // Output: 6
