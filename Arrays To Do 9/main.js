@@ -37,7 +37,7 @@ function findMedian(arr1, arr2) {
   console.log(findMedian(arr1, arr2, arr3)); // Output: 5.5
 
   // 2- Time to English:
-  
+
   function timeToEnglish(minutes) {
     const hours = Math.floor(minutes / 60) % 12;
     const mins = minutes % 60;
@@ -63,3 +63,21 @@ function findMedian(arr1, arr2) {
   console.log(timeToEnglish(75)); // Output: "quarter past 1 am"
   console.log(timeToEnglish(710)); // Output: "10 til noon"
   console.log(timeToEnglish(1000)); // Output: "20 til 5 pm"
+
+  // 3-Missing Value
+
+  function findMissingValue(arr) {
+    const n = arr.length;
+    const sum = (n * (n + 1)) / 2;
+    let actualSum = 0;
+    
+    for (let i = 0; i < n; i++) {
+      actualSum += arr[i];
+    }
+    
+    return sum - actualSum;
+  }
+  
+  // Example usage:
+  const arr = [3, 0, 1];
+  console.log(findMissingValue(arr)); // Output: 2
