@@ -54,3 +54,20 @@ function lastDigitAtoB(a, b) {
   ];
   
   console.log(matrixSearch(larger, smaller)); // Output: [1, 1]
+
+  // 3- Max of Subarray Sums:
+  function maxSubarraySum(arr) {
+    let maxSum = 0;
+    let currentSum = 0;
+  
+    for (let i = 0; i < arr.length; i++) {
+      currentSum = Math.max(0, currentSum + arr[i]);
+      maxSum = Math.max(maxSum, currentSum);
+    }
+  
+    return maxSum;
+  }
+  
+  // Example usage
+  console.log(maxSubarraySum([1, 2, -4, 3, -2, 3, -1])); // Output: 4
+  console.log(maxSubarraySum([-1, -2, -4, -3, -2, -3])); // Output: 0
