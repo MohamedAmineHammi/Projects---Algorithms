@@ -63,3 +63,38 @@ function parensValid(str) {
   console.log(isPalindrome("racecar")); // true
   console.log(isPalindrome("Dud")); // true
   console.log(isPalindrome("oho!")); // true
+
+  // 4- Longest Palindrome:
+
+  function longestPalindrome(str) {
+    let longest = "";
+    for (let i = 0; i < str.length; i++) {
+      for (let j = i + 1; j <= str.length; j++) {
+        const substr = str.slice(i, j);
+        if (isPalindrome(substr) && substr.length > longest.length) {
+          longest = substr;
+        }
+      }
+    }
+    return longest;
+  }
+  
+  console.log(longestPalindrome("what up, daddy-o?")); // "dad"
+  console.log(longestPalindrome("uh... not much")); // "u"
+  console.log(longestPalindrome("Yikes! my favorite racecar erupted!")); // "e racecar e"
+  
+  function longestPalindrome(str) {
+    str = str.replace(/[^a-zA-Z]/g, "").toLowerCase();
+    let longest = "";
+    for (let i = 0; i < str.length; i++) {
+      for (let j = i + 1; j <= str.length; j++) {
+        const substr = str.slice(i, j);
+        if (isPalindrome(substr) && substr.length > longest.length) {
+          longest = substr;
+        }
+      }
+    }
+    return longest;
+  }
+  
+  console.log(longestPalindrome("Hot puree eruption!")); // "tpureeerupt"
