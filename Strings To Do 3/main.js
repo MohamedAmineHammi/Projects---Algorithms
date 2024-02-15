@@ -40,3 +40,26 @@ function parensValid(str) {
   console.log(bracesValid("W(a{t}s[o(n{ c}o)m]e )h[e{r}e]!")); // true
   console.log(bracesValid("D(i{a}l[ t]o)n{e")); // false
   console.log(bracesValid("A(1)s[O (n]0{t) 0}k")); // false
+
+  // 3-Is Palindrome
+  function isStrictPalindrome(str) {
+    str = str.replace(/[^a-zA-Z]/g, "").toLowerCase();
+    const reversed = str.split("").reverse().join("");
+    return str === reversed;
+  }
+  
+  console.log(isStrictPalindrome("a x a")); // true
+  console.log(isStrictPalindrome("racecar")); // true
+  console.log(isStrictPalindrome("Dud")); // false
+  console.log(isStrictPalindrome("oho!")); // false
+  
+  function isPalindrome(str) {
+    str = str.replace(/[^a-zA-Z]/g, "").toLowerCase();
+    const reversed = str.split("").reverse().join("");
+    return str === reversed;
+  }
+  
+  console.log(isPalindrome("a x a")); // true
+  console.log(isPalindrome("racecar")); // true
+  console.log(isPalindrome("Dud")); // true
+  console.log(isPalindrome("oho!")); // true
