@@ -17,3 +17,28 @@ function isWordAlphabetical(word) {
   
   // Example usage
   console.log(coolGreeting("Dylan")); // Output: "Ylan to the D!"
+
+  // 3- Common Suffix:
+  function findCommonSuffix(words) {
+    if (words.length === 0) {
+      return "";
+    }
+  
+    let suffix = "";
+    for (let i = 0; i < words[0].length; i++) {
+      const char = words[0].charAt(words[0].length - 1 - i);
+      if (words.every((word) => word.charAt(word.length - 1 - i) === char)) {
+        suffix = char + suffix;
+      } else {
+        break;
+      }
+    }
+  
+    return suffix;
+  }
+  
+  // Example usage
+  console.log(
+    findCommonSuffix(["deforestation", "citation", "conviction", "incarceration"])
+  ); // Output: "tion"
+  console.log(findCommonSuffix(["nice", "ice", "baby"])); // Output: ""
