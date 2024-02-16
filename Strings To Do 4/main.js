@@ -74,3 +74,22 @@ function isWordAlphabetical(word) {
   
   // Example usage
   console.log(createBookIndex([1, 13, 14, 15, 37, 38, 70])); // Output: "1, 13-15, 37-38, 70"
+
+  // 5- Drop the Mike:
+  function dropTheMike(str) {
+    if (str.includes("Mike")) {
+      return "stunned silence";
+    }
+  
+    const words = str.trim().split(" ");
+    const capitalizedWords = words.map((word) => capitalizeFirstLetter(word));
+    return capitalizedWords.join(" ");
+  }
+  
+  function capitalizeFirstLetter(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+  }
+  
+  // Example usage
+  console.log(dropTheMike(" mike is here ")); // Output: "stunned silence"
+  console.log(dropTheMike("hello world")); // Output: "Hello World"
