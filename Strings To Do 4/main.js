@@ -42,3 +42,35 @@ function isWordAlphabetical(word) {
     findCommonSuffix(["deforestation", "citation", "conviction", "incarceration"])
   ); // Output: "tion"
   console.log(findCommonSuffix(["nice", "ice", "baby"])); // Output: ""
+
+  // 4-Book Index:
+  function createBookIndex(pages) {
+    let index = "";
+    let start = pages[0];
+    let end = pages[0];
+    
+    for (let i = 1; i < pages.length; i++) {
+      if (pages[i] === pages[i - 1] + 1) {
+        end = pages[i];
+      } else {
+        if (start === end) {
+          index += start + ", ";
+        } else {
+          index += start + "-" + end + ", ";
+        }
+        start = pages[i];
+        end = pages[i];
+      }
+    }
+    
+    if (start === end) {
+      index += start;
+    } else {
+      index += start + "-" + end;
+    }
+  
+    return index;
+  }
+  
+  // Example usage
+  console.log(createBookIndex([1, 13, 14, 15, 37, 38, 70])); // Output: "1, 13-15, 37-38, 70"
