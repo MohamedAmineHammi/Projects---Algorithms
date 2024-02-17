@@ -1,0 +1,11 @@
+Strings To Do 5
+
+
+Coin Change with Object
+As before, given a number of U.S. cents, return the optimal configuration of coins, in an object.
+
+
+
+Max/Min/Average with Object
+Given an array, return an object containing the array’s max, min, and average values.
+
