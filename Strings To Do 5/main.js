@@ -22,3 +22,11 @@ function coinChange(cents) {
   }
   
   console.log(coinChange(97));
+
+  // output
+  {
+    quarters: 3,
+    dimes: 2,
+    nickels: 0,
+    pennies: 2
+  }
