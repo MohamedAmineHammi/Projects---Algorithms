@@ -57,3 +57,10 @@ function coinChange(cents) {
   }
   
   console.log(calculateStats([1, 5, 3, 9, 2]));
+
+  Output:
+  {
+    max: 9,
+    min: 1,
+    average: 4
+  }
