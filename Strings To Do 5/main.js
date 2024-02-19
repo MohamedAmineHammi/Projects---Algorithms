@@ -30,3 +30,30 @@ function coinChange(cents) {
     nickels: 0,
     pennies: 2
   }
+
+  // 2- Max/Min/Average with Object
+
+  function calculateStats(arr) {
+    var stats = {
+      max: arr[0],
+      min: arr[0],
+      average: 0
+    };
+  
+    var sum = 0;
+    for (var i = 0; i < arr.length; i++) {
+      if (arr[i] > stats.max) {
+        stats.max = arr[i];
+      }
+      if (arr[i] < stats.min) {
+        stats.min = arr[i];
+      }
+      sum += arr[i];
+    }
+  
+    stats.average = sum / arr.length;
+  
+    return stats;
+  }
+  
+  console.log(calculateStats([1, 5, 3, 9, 2]));
