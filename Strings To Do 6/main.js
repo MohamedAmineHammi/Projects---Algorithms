@@ -26,3 +26,18 @@ function zipArraysIntoMap(arr1, arr2) {
   var assocArr = {"name": "Zaphod", "charm": "high", "morals": "dicey"};
   var output = invertHash(assocArr);
   console.log(output); // Output: {"Zaphod": "name", "high": "charm", "dicey": "morals"}
+
+  // 3-Number of Values (without .length):
+  function countValues(obj) {
+    var count = 0;
+    for (var key in obj) {
+      if (obj.hasOwnProperty(key)) {
+        count++;
+      }
+    }
+    return count;
+  }
+  
+  var obj = {"band": "Travis Shredd & the Good Ol’ Homeboys", "style": "Country/Metal/Rap", "album": "668: The Neighbor of the Beast"};
+  var output = countValues(obj);
+  console.log(output); // Output: 3
