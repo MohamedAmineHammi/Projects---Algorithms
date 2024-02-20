@@ -11,3 +11,18 @@ function zipArraysIntoMap(arr1, arr2) {
   var arr2 = [42, "wassup", true];
   var output = zipArraysIntoMap(arr1, arr2);
   console.log(output); // Output: {"abc": 42, 3: "wassup", "yo": true}
+
+  // 2-Invert Hash:
+  function invertHash(assocArr) {
+    var result = {};
+    for (var key in assocArr) {
+      if (assocArr.hasOwnProperty(key)) {
+        result[assocArr[key]] = key;
+      }
+    }
+    return result;
+  }
+  
+  var assocArr = {"name": "Zaphod", "charm": "high", "morals": "dicey"};
+  var output = invertHash(assocArr);
+  console.log(output); // Output: {"Zaphod": "name", "high": "charm", "dicey": "morals"}
