@@ -27,3 +27,6 @@ hello goodbye
 const str = "Hello,World,JavaScript";
 const splittedArray = str.split(",");
 console.log(splittedArray);
+
+// Output:
+["Hello", "World", "JavaScript"]
