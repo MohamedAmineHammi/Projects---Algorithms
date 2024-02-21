@@ -15,5 +15,8 @@ console.log(slicedString);
 // Output:
 World
 
-
+// 3- String.trim:
+const str = "   hello goodbye   ";
+const trimmedString = str.trim();
+console.log(trimmedString);
 
