@@ -1,0 +1,32 @@
+Strings To Do 7
+
+
+String.concat
+String.concat(str2,str3,...,strX) - add string(s) to end of existing one. Return new string.
+
+
+
+String.slice
+String.slice(start,end) - extract part of a string and return in a new one. Start and end are indices into the string, with the first character at index 0. End param is optional and if present, refers to one beyond the last character to include.
+
+Bonus: include support for negative indices, representing offsets from string-end.
+
+Example: String.slice(-1) returns the string’s last character.
+
+
+
+String.trim
+String.trim() - remove whitespace (spaces, tabs, newlines) from both sides, and return a new string. 
+
+Example: " \n hello goodbye \t ".trim() should return "hello goodbye".
+
+ 
+
+String.split
+String.split(separator,limit) - split string into an array of substrings, returning an array. Separator specifies where to divide substrings and is not included in any substring. If "" is specified, split the string on every character. Limit is optional and indicates the number of splits; additional post-limit items should be discarded. Note: existing string is unaffected.
+
+
+
+String.search
+String.search(val) - search string for the given val (another string). Return the index position of the first match found (or -1 if not found).
+
