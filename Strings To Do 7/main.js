@@ -20,3 +20,6 @@ const str = "   hello goodbye   ";
 const trimmedString = str.trim();
 console.log(trimmedString);
 
+// Output
+hello goodbye
+
