@@ -23,3 +23,7 @@ console.log(trimmedString);
 // Output
 hello goodbye
 
+// 4- String.split:
+const str = "Hello,World,JavaScript";
+const splittedArray = str.split(",");
+console.log(splittedArray);
