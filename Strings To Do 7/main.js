@@ -12,3 +12,8 @@ const str = "Hello, World!";
 const slicedString = str.slice(7, 12);
 console.log(slicedString);
 
+// Output:
+World
+
+
+
