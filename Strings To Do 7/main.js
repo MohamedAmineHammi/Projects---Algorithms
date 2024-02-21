@@ -7,4 +7,8 @@ console.log(concatenatedString);
 // Output:
 HelloWorld
 
+// 2- String.slice:
+const str = "Hello, World!";
+const slicedString = str.slice(7, 12);
+console.log(slicedString);
 
