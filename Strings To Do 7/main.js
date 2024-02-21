@@ -35,3 +35,6 @@ console.log(splittedArray);
 const str = "Hello, World!";
 const searchIndex = str.search("World");
 console.log(searchIndex);
+
+// Output:
+7
