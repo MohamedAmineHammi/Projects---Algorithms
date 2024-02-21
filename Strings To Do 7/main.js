@@ -30,3 +30,8 @@ console.log(splittedArray);
 
 // Output:
 ["Hello", "World", "JavaScript"]
+
+// 5- String.search:
+const str = "Hello, World!";
+const searchIndex = str.search("World");
+console.log(searchIndex);
