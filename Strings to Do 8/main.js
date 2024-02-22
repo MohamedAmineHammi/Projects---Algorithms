@@ -44,3 +44,10 @@ function uniqueWords(str) {
     const uniqueWords = words.filter(word => wordCount[word] === 1);
     return uniqueWords.join(' ');
   }
+
+  // Testing the functions
+const inputString = "Life is not a drill!";
+console.log(stringToWordArray(inputString)); // Output: ["Life", "is", "not", "a", "drill!"]
+console.log(reverseWordOrder("This is a test")); // Output: "test a is This"
+console.log(longestWord("Snap crackle pop makes the world go round!")); // Output: "crackle"
+console.log(uniqueWords("Sing! Sing a song; sing out loud; sing out strong.")); // Output: "Sing! Sing a song; loud; strong"
