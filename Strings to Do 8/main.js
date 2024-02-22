@@ -15,3 +15,16 @@ function reverseWordOrder(str) {
     const reversedStr = words.reverse().join(' ');
     return reversedStr;
   }
+
+  // Longest Word
+function longestWord(str) {
+    // Remove punctuation and convert to lowercase
+    const cleanedStr = str.replace(/[^\w\s]/g, '').toLowerCase();
+    // Split the string into an array of words
+    const words = cleanedStr.split(/\s+/);
+    // Find the longest word in the array
+    const longest = words.reduce((longestWord, currentWord) => {
+      return currentWord.length > longestWord.length ? currentWord : longestWord;
+    }, "");
+    return longest;
+  }
