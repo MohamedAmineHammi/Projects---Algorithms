@@ -65,3 +65,11 @@ function optimalSequence(arr) {
     }
     return result;
   }
+
+  // Testing the functions
+console.log(rotateString("Boris Godunov", 5)); // Output: "dunovBoris Go"
+console.log(censorString("Snap crackle pop nincompoop!", ["crack","poop"])); // Output: "Snap xxxxxle pop nincomxxxx!"
+console.log(isRotation("rotation", "tionrota")); // Output: true
+console.log(removeCharacters("Hello World", "lo")); // Output: "He Wrd"
+console.log(findString(["apple", "banana", "?at"], "cat")); // Output: true
+console.log(optimalSequence(["EA?K", "?RX?", "GAG?"])); // Output: ["EAAK","GAGK","GRXK"]
