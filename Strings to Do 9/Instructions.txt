@@ -1,0 +1,44 @@
+Strings to Do 9
+Let’s revisit strings with recursion in mind. Recursion is often quite valuable, as shown in this chapter.
+
+
+
+String: Rotate String
+Create a standalone function that accepts a string and an integer, and rotates the characters in the string to the right by that amount. Example: given ("Boris Godunov",5), you should return "dunovBoris Go".
+
+
+
+
+Censor
+Create a function that, given string and array of ‘naughty words’, returns new string with naughty words changed to “x” chars. Given ("Snap crackle pop nincompoop!", ["crack","poop"]), you should return "Snap xxxxxle pop nincomxxxx!" (after giggling a little bit).
+
+Second: handle capitalization appropriately.
+
+
+
+String: ionIs Rotat (Is Rotation)
+ Create the function isRotation(str1,str2) that returns whether the second string is a rotation of the first. Would you change your implementation if you knew that the two were usually entirely unrelated?
+
+
+
+Bad Characters
+Given two strings, the second string contains characters that must be removed from the first. Return string formed by removing any instances of those characters from the first string.
+
+
+
+
+Genetic Marker
+Create a function that, given an array of strings and a string, returns a boolean whether the string is found anywhere in the array of strings. Note: strings found in the array might contain the ‘?’ wild-card character, signifying that it can represent any character needed in order to complete a match.
+
+
+
+Optimal Sequence
+You will be given an array of strings. All of these strings are the same length, and all contain only upper-case alphabetical characters or the ‘?’ character. The ‘?’ is a single-character wild-card; you can change it into any character needed. Return the sequence of words satisfying the following constraints:
+
+From first word to last word, each column of letters must be in alphabetical order.
+All question-mark characters must be expanded into their explicit values in the return array.
+If more than one solution exists, return the one with lower overall alphabetical value.
+If no solution exists, return null.
+Examples: given the array ["EA?K","?RX?","GAG?"], return ["EAAK","GAGK","GRXK"]. For the array ["?F??","W??S","??X?"], your function should return ["AAXA","AFXA","WFXS"]. For an input of ["?UD","FI?","A?E"], return null.
+
+
