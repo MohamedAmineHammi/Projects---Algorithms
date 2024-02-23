@@ -44,3 +44,24 @@ function findString(arr, str) {
     }
     return false;
   }
+
+  // Optimal Sequence
+function optimalSequence(arr) {
+    const length = arr[0].length;
+    const result = [];
+    for (let i = 0; i < length; i++) {
+      let columnChars = [];
+      for (let word of arr) {
+        columnChars.push(word[i]);
+      }
+      const uniqueChars = Array.from(new Set(columnChars));
+      if (uniqueChars.length === 1 && uniqueChars[0] === '?') {
+        result.push('A');
+      } else if (uniqueChars.length === 1) {
+        result.push(uniqueChars[0]);
+      } else {
+        return null;
+      }
+    }
+    return result;
+  }
