@@ -21,3 +21,15 @@ function isRotation(str1, str2) {
     const concatenated = str1 + str1;
     return concatenated.includes(str2);
   }
+
+  // Bad Characters
+function removeCharacters(str1, str2) {
+    const charSet = new Set(str2);
+    const result = [];
+    for (let char of str1) {
+      if (!charSet.has(char)) {
+        result.push(char);
+      }
+    }
+    return result.join('');
+  }
