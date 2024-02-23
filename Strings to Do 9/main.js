@@ -33,3 +33,14 @@ function removeCharacters(str1, str2) {
     }
     return result.join('');
   }
+
+  // Genetic Marker
+function findString(arr, str) {
+    for (let word of arr) {
+      const regex = new RegExp('^' + word.replace(/\?/g, '.') + '$');
+      if (regex.test(str)) {
+        return true;
+      }
+    }
+    return false;
+  }
