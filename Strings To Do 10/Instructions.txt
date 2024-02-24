@@ -1,0 +1,32 @@
+Strings To Do 10
+This chapter we revisit strings, having mastered the fine art of recursion. Remember: recursion is not an answer to every problem; everything that can be solved with recursion can also be solved without.
+
+
+
+
+String: Dedupe
+Remove duplicate characters (case-sensitive) including punctuation. Keep only the last instance of each character. Given "Snaps! crackles! pops!", return "Snrackle ops!".
+
+
+
+Index of First Unique Letter
+Return the index of the first unique (case-sensitive) character in a given string. Ex.: "empathetic monarch meets primo stinker" should return 35 (str[35] is "k").
+
+
+
+Unique Letters
+Return only the unique characters from a given string. Specifically, omit all instances of a (case-sensitive) character if it appears more than once, respecting spaces and punctuation. Given "Snap! Crackle! Poop!", return "SnCrcklePp".
+
+
+
+Num to String
+Create a function that converts a number into a string containing those exact numerals. For example, given 1234, return the string "1234". No, you may not use the toString() function.
+
+Second: include fractional values as well. Given 11.2051, return "11.2051".
+
+ 
+
+Num to Text
+Convert an integer into the English text for the number. Given 40213, return "forty thousand two hundred thirteen".
+
+Second: include 4 fractional digits. Given 11.2051, return "eleven point two zero five one".
