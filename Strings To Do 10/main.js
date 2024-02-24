@@ -36,3 +36,23 @@ function dedupeString(str) {
   var inputString = "empathetic monarch meets primo stinker";
   var index = indexOfFirstUniqueLetter(inputString);
   console.log(index); // Output: 35
+
+  // Unique Letters:
+  function uniqueLetters(str) {
+    var charCount = {};
+    var result = "";
+    for (var i = 0; i < str.length; i++) {
+      var char = str[i];
+      if (charCount[char] === undefined) {
+        charCount[char] = 1;
+        result += char;
+      } else {
+        charCount[char]++;
+      }
+    }
+    return result;
+  }
+  
+  var inputString = "Snap! Crackle! Poop!";
+  var uniqueChars = uniqueLetters(inputString);
+  console.log(uniqueChars); // Output: SnCrcklePp
