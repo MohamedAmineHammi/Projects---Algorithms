@@ -56,3 +56,33 @@ function dedupeString(str) {
   var inputString = "Snap! Crackle! Poop!";
   var uniqueChars = uniqueLetters(inputString);
   console.log(uniqueChars); // Output: SnCrcklePp
+
+  // Num to String:
+  function numToString(num) {
+    var isNegative = false;
+    if (num < 0) {
+      isNegative = true;
+      num = -num;
+    }
+  
+    var result = "";
+    do {
+      var digit = num % 10;
+      result = String.fromCharCode(digit + 48) + result;
+      num = Math.floor(num / 10);
+    } while (num > 0);
+  
+    if (isNegative) {
+      result = "-" + result;
+    }
+  
+    return result;
+  }
+  
+  var number = 1234;
+  var numberString = numToString(number);
+  console.log(numberString); // Output: "1234"
+  
+  var fractionalNumber = 11.2051;
+  var fractionalNumberString = numToString(fractionalNumber);
+  console.log(fractionalNumberString); // Output: "11.2051"
