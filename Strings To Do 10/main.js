@@ -12,3 +12,27 @@ function dedupeString(str) {
   var inputString = "Snaps! crackles! pops!";
   var dedupedString = dedupeString(inputString);
   console.log(dedupedString); // Output: Snrackle ops!
+
+  // Index of First Unique Letter:
+  function indexOfFirstUniqueLetter(str) {
+    var charCount = {};
+    for (var i = 0; i < str.length; i++) {
+      var char = str[i];
+      if (charCount[char] === undefined) {
+        charCount[char] = 1;
+      } else {
+        charCount[char]++;
+      }
+    }
+    for (var i = 0; i < str.length; i++) {
+      var char = str[i];
+      if (charCount[char] === 1) {
+        return i;
+      }
+    }
+    return -1; // No unique letter found
+  }
+  
+  var inputString = "empathetic monarch meets primo stinker";
+  var index = indexOfFirstUniqueLetter(inputString);
+  console.log(index); // Output: 35
