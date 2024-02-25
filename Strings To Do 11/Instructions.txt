@@ -1,0 +1,42 @@
+Strings To Do 11
+This chapter we revisit strings, having mastered the fine art of recursion. Remember: recursion is not an answer to every problem; everything that can be solved with recursion can also be solved without.
+
+
+
+String: Is Permtutaoin (Is Permutation)
+Create a function that returns whether second string is a permutation of first. For example, given ("mister","stimer"), return true. Given ("mister", "sister"), return false.
+
+Bonus: handle uppercase/lowercase.
+
+
+
+String: All Permutations
+Create a function that returns all permutations of a given string. Example: given "team", return an array with the unique 24 strings including "team", "meat", "tame", "mate", "aemt", "tmea", "etam", "atme", etc. How can you know that you covered them all?
+
+
+
+String: Is Pangram
+Return whether a string contains all letters in the English alphabet (upper or lower case). For "How quickly daft jumping zebras vex!", return true. For "abcdef ghijkl mno pqrs tuv wxy, not so fast!", return false.
+
+
+
+String: Is Perfect Pangram
+Create a function that returns whether a given string contains all letters in the English alphabet (upper or lower case) once and only once. Note: ignore punctuation and spaces. Given "Playing jazz vibe chords quickly excites my wife.", return false. Given "Mr. Jock, TV quiz PhD, bags few lynx.", return true.
+
+ 
+
+Sick of strings? How about stocks? Remember, recursion is not always the best way to solve problems.
+
+
+
+Best Time to Buy and Sell Stock
+Using his machine learning prowess, Uthman can perfectly predict the closing price of one specific publicly traded stock. Before using his power for good, he will raise money in the stock market. Write bestSingleBuySell(arr) to return his maximal profit from one purchase and then sale, of just one share. The given arr holds the prices at which he can make his purchase and sale. Example: given the array [6,4,6,5,9,7,6,12,2,6,11,2,4], return the maximal profit 9.
+
+ 
+
+Second: instead of a single buy/sell, let’s say he can make a series of them, but can still only hold either one or zero shares at any time. Rework your function to maximize profit, and return that profit. Example: given the array [6,4,6,5,9,7,6,12,2,6,11,2,4], return the maximal profit 23.
+
+Third: if he can make at most two transactions, now what is his best strategy? Rework your function. Example: given the array [6,4,6,5,9,7,6,12,2,6,11,2,4], return the maximal profit 17.
+
+Fourth: what if he can make at most K transactions? Given arr and K, rework your function.
+
