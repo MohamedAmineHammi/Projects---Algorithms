@@ -53,3 +53,5 @@ function allPermutations(str) {
   // Example usage:
   console.log(isPangram("How quickly daft jumping zebras vex!")); // true
   console.log(isPangram("abcdef ghijkl mno pqrs tuv wxy, not so fast!")); // false
+
+  //4. Is Perfect Pangram:
