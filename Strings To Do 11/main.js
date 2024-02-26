@@ -164,3 +164,21 @@ function bestSingleBuySell(prices) {
   
   // Example usage:
   console.log(allPermutations('team')); // ['team', 'tame', 'taem', 'tmae', 'tema', 'team', ...]
+
+  // 3. Is Pangram:
+  function isPangram(str) {
+    const alphabet = 'abcdefghijklmnopqrstuvwxyz';
+    const lowercaseStr = str.toLowerCase();
+  
+    for (let char of alphabet) {
+      if (!lowercaseStr.includes(char)) {
+        return false;
+      }
+    }
+  
+    return true;
+  }
+  
+  // Example usage:
+  console.log(isPangram("How quickly daft jumping zebras vex!")); // true
+  console.log(isPangram("abcdef ghijkl mno pqrs tuv wxy, not so fast!")); // false
