@@ -182,3 +182,27 @@ function bestSingleBuySell(prices) {
   // Example usage:
   console.log(isPangram("How quickly daft jumping zebras vex!")); // true
   console.log(isPangram("abcdef ghijkl mno pqrs tuv wxy, not so fast!")); // false
+
+  // 4. Is Perfect Pangram:
+  function isPerfectPangram(str) {
+    const alphabet = 'abcdefghijklmnopqrstuvwxyz';
+    const lowercaseStr = str.toLowerCase().replace(/[^a-z]/g, '');
+  
+    const charCount = {};
+  
+    for (let char of lowercaseStr) {
+      charCount[char] = (charCount[char] || 0) + 1;
+    }
+  
+    for (let char of alphabet) {
+      if (charCount[char] !== 1) {
+        return false;
+      }
+    }
+  
+    return true;
+  }
+  
+  // Example usage:
+  console.log(isPerfectPangram("Playing jazz vibe chords quickly excites my wife.")); // false
+  console.log(isPerfectPangram("Mr. Jock, TV quiz PhD, bags few lynx.")); // true
