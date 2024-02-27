@@ -1,0 +1,24 @@
+Strings To Do 12
+This chapter we revisit strings, having mastered the fine art of recursion. Remember: recursion is not an answer to every problem; everything that can be solved with recursion can also be solved without.
+
+
+
+Are Strings Loosely Interleaved
+Given three strings, return boolean whether third string is a proper (no dupes) interleaving of first two. Given ("dne","ail","daniel") return true. Given ("dne","ail","dalein") return false. For ("dne","ail","ddaanneeiill") return false.
+
+
+
+All Loosely Interleaved Strings
+Given two strings, return an array containing all possible proper interleavings of those strings. Given ("ab","yz"), your function should return ["abyz","aybz","ayzb","yabz","yazb","yzab"].
+
+Second: Ensure no duplicates in your returned result array.
+
+
+
+Make String Palindrome (Remove One)
+Given a string, return the index of the first character which, if removed, converts the string into a palindrome. If the string is already palindromic, return -1. Given "bene" return 0 ("ene"). Given "dude" return 3 ("dud"). Given "bub", return -1. You can assume there will always be a solution, for the string provided.
+
+
+
+Make String Palindrome (Add One)
+Given a string, return a character which, if added somewhere in the string, converts it into a palindrome. If the string is already palindromic, return "". Given "tutu" return "u" or "t". Given "dude" return "e". Given "dad", return "". You can assume there will always be a solution, for the string provided.
