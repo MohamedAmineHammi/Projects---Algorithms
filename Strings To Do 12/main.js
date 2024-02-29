@@ -42,3 +42,41 @@ function areStringsLooselyInterleaved(str1, str2, str3) {
   
   // Example usage:
   console.log(allLooselyInterleavedStrings("ab", "yz")); // ["abyz","aybz","ayzb","yabz","yazb","yzab"]
+
+  //Make String Palindrome (Remove One):
+  function makeStringPalindromeRemoveOne(str) {
+    function isPalindrome(s, left, right) {
+      while (left < right) {
+        if (s[left] !== s[right]) {
+          return false;
+        }
+        left++;
+        right--;
+      }
+      return true;
+    }
+  
+    let left = 0;
+    let right = str.length - 1;
+  
+    while (left < right) {
+      if (str[left] !== str[right]) {
+        if (isPalindrome(str, left + 1, right)) {
+          return left;
+        }
+        if (isPalindrome(str, left, right - 1)) {
+          return right;
+        }
+        return -1;
+      }
+      left++;
+      right--;
+    }
+  
+    return -1;
+  }
+  
+  // Example usage:
+  console.log(makeStringPalindromeRemoveOne("bene")); // 0
+  console.log(makeStringPalindromeRemoveOne("dude")); // 3
+  console.log(makeStringPalindromeRemoveOne("bub")); // -1
