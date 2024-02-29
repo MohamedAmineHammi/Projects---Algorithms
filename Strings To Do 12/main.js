@@ -80,3 +80,34 @@ function areStringsLooselyInterleaved(str1, str2, str3) {
   console.log(makeStringPalindromeRemoveOne("bene")); // 0
   console.log(makeStringPalindromeRemoveOne("dude")); // 3
   console.log(makeStringPalindromeRemoveOne("bub")); // -1
+
+  // Make String Palindrome (Add One):
+  function makeStringPalindromeAddOne(str) {
+    if (str.length === 0) {
+      return '';
+    }
+  
+    let left = 0;
+    let right = str.length - 1;
+  
+    while (left < right) {
+      if (str[left] !== str[right]) {
+        if (str[left] === str[right - 1]) {
+          return str[left];
+        }
+        if (str[left + 1] === str[right]) {
+          return str[right];
+        }
+        return '';
+      }
+      left++;
+      right--;
+    }
+  
+    return '';
+  }
+  
+  // Example usage:
+  console.log(makeStringPalindromeAddOne("tutu")); // "u" or "t"
+  console.log(makeStringPalindromeAddOne("dude")); // "e"
+  console.log(makeStringPalindromeAddOne("dad")); // ""
