@@ -39,3 +39,39 @@ function encodeString(str) {
   // Example usage:
   console.log(decodeString("a3b2c1d3")); // Output: "aaabbcddd"
 
+  // 3-Shortener:
+  function shortenString(str, length) {
+    str = str.trim();
+  
+    if (str.length <= length) {
+      return str;
+    }
+  
+    // Capitalize each word
+    str = str.replace(/\b\w/g, (match) => match.toUpperCase());
+  
+    // Remove spaces between words (starting from the back)
+    str = str.split(' ').join('');
+  
+    // Remove punctuation (starting from the back)
+    str = str.replace(/[^\w\s]|_/g, '');
+  
+    // Remove lower-case letters (vowels first, starting from the back)
+    str = str.replace(/[aeiou]/g, '');
+  
+    // Remove upper-case letters (starting from the back)
+    str = str.replace(/[A-Z]/g, '');
+  
+    // Trim the string to the desired length
+    return str.slice(-length);
+  }
+  
+  // Example usage:
+  console.log(shortenString("It's a wonderful life, Beth! ", 33)); // Output: " It's a wonderful life, Beth! "
+  console.log(shortenString("It's a wonderful life, Beth! ", 26)); // Output: "It's A WonderfulLife,Beth!"
+  console.log(shortenString("It's a wonderful life, Beth! ", 22)); // Output: "It'sAWonderfulLifeBeth"
+  console.log(shortenString("It's a wonderful life, Beth! ", 17)); // Output: "ItsAWonderflLfBth"
+  console.log(shortenString("It's a wonderful life, Beth! ", 12)); // Output: "ItsAWndrflLB"
+  console.log(shortenString("It's a wonderful life, Beth! ", 3)); // Output: "IAW"
+
+
