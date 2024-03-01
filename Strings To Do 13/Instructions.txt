@@ -1,0 +1,37 @@
+Strings To Do 13
+This chapter we revisit strings, having mastered the fine art of recursion. Remember: recursion is not an answer to every problem; everything that can be solved with recursion can also be solved without.
+
+
+
+String Encode
+You are given a string that may contain sequences of consecutive characters. Create a function to shorten a string by including the character, then the number of times it appears. For "aaaabbcddd", return "a4b2c1d3". If result is not shorter (such as "bb"=>"b2"), return the original string.
+
+
+
+String Decode
+Given an encoded string (see above), decode and return it. Given "a3b2c1d3", return "aaabbcddd".
+
+
+
+Shortener
+Given string and desired length, return a maximally readable string of that length, using this process:
+
+Remove any leading or trailing spaces (or conversely, pad on both sides out to the desired length),
+Capitalize each word before removing spaces between words (starting from the back),
+Remove punctuation, starting from the back,
+Remove lower-case letters (vowels first), from the back,
+Remove upper-case letters, from the back.
+Given a string "It's a wonderful life, Beth! ", desired outputs for the following lengths are:
+
+33          " It's a wonderful life, Beth! "
+
+26          "It's A WonderfulLife,Beth!"
+
+22          "It'sAWonderfulLifeBeth"
+
+17           "ItsAWonderflLfBth"
+
+12           "ItsAWndrflLB"
+
+3            "IAW"
+
