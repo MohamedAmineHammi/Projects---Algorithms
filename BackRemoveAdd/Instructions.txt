@@ -1,0 +1,32 @@
+Back/Remove/Add
+SList: Back
+Create a method that returns the last value in the list.
+
+ class SLL {
+    // constructor, other methods, removed for brevity
+    back() {
+    	// what is the last value in my SLL?
+    }
+ }
+
+
+SList: Remove Back
+Create a method that removes the last ListNode in the list and returns the new list.
+
+ class SLL {
+    // constructor, other methods, removed for brevity
+    removeBack() {
+    	// remove last value, return new list
+    }
+ }
+
+
+SList: Add Back
+Create a method that creates a Node with given value and inserts it at end of your linked list.
+
+ class SLL {
+    // constructor, other methods, removed for brevity
+    addBack(value) {
+    	// create a node containing value, add it to back of my list
+    }
+ }
