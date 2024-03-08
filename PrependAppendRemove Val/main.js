@@ -110,3 +110,53 @@ while (currentNode) {
 10
 4
 5
+
+// 3-SList: Remove Val
+class ListNode {
+    constructor(val, next = null) {
+      this.val = val;
+      this.next = next;
+    }
+  }
+  
+  function removeVal(head, val) {
+    if (!head) {
+      return null; // Empty list, nothing to remove
+    }
+  
+    if (head.val === val) {
+      return head.next; // Remove the head node
+    }
+  
+    let currentNode = head;
+    while (currentNode.next) {
+      if (currentNode.next.val === val) {
+        currentNode.next = currentNode.next.next; // Remove the node
+        return head;
+      }
+      currentNode = currentNode.next;
+    }
+  
+    return head; // If val is not found, return the original list
+  }
+  // Create sample linked list: 1 -> 2 -> 3 -> 4 -> 5
+const node5 = new ListNode(5);
+const node4 = new ListNode(4, node5);
+const node3 = new ListNode(3, node4);
+const node2 = new ListNode(2, node3);
+const node1 = new ListNode(1, node2);
+
+// Calling removeVal to remove the node with value 3
+const newList = removeVal(node1, 3);
+
+// Print the new list
+let currentNode = newList;
+while (currentNode) {
+  console.log(currentNode.val);
+  currentNode = currentNode.next;
+}
+// Output
+1
+2
+4
+5
