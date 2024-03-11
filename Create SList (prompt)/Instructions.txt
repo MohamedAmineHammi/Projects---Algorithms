@@ -1,0 +1,4 @@
+Create SList (prompt)
+Create an SList with values entered. Use the prompt function to gather values one at a time from the user, putting each into a ListNode that you add to the end of the list. When the user hits [Cancel], return the list you have created.
+
+
