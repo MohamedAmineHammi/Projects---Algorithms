@@ -40,3 +40,18 @@ function removeNegatives(head) {
   
     return head;
   }
+
+  // SList: Concat
+function concatLists(list1, list2) {
+    if (!list1) {
+      return list2;
+    }
+  
+    let current = list1;
+    while (current.next) {
+      current = current.next;
+    }
+  
+    current.next = list2;
+    return list1;
+  }
