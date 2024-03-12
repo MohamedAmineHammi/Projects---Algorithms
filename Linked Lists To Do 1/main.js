@@ -22,3 +22,21 @@ class ListNode {
     slow.next = null;
     return newList;
   }
+
+  // SList: Remove Negatives
+function removeNegatives(head) {
+    while (head && head.val < 0) {
+      head = head.next;
+    }
+  
+    let current = head;
+    while (current && current.next) {
+      if (current.next.val < 0) {
+        current.next = current.next.next;
+      } else {
+        current = current.next;
+      }
+    }
+  
+    return head;
+  }
