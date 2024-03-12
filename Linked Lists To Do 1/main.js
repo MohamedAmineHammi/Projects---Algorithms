@@ -55,3 +55,28 @@ function concatLists(list1, list2) {
     current.next = list2;
     return list1;
   }
+
+  // SList: Partition
+function partition(head, value) {
+    let lessHead = new ListNode(0);
+    let lessTail = lessHead;
+    let greaterHead = new ListNode(0);
+    let greaterTail = greaterHead;
+  
+    let current = head;
+  
+    while (current) {
+      if (current.val < value) {
+        lessTail.next = current;
+        lessTail = lessTail.next;
+      } else {
+        greaterTail.next = current;
+        greaterTail = greaterTail.next;
+      }
+      current = current.next;
+    }
+  
+    greaterTail.next = null;
+    lessTail.next = greaterHead.next;
+    return lessHead.next;
+  }
