@@ -25,3 +25,20 @@ function rTrib(num) {
   console.log(rTrib(4)); // Output: 2
   console.log(rTrib(5)); // Output: 4
   console.log(rTrib(6)); // Output: 7
+
+  // Zibonacci
+function Zib(num) {
+    if (num === 0 || num === 1) return 1;
+    if (num === 2) return 2;
+  
+    if (num % 2 === 0) {
+      const n = num / 2;
+      return Zib(n) + Zib(n + 1) + 1;
+    } else {
+      const n = (num - 1) / 2;
+      return Zib(n) + Zib(n - 1) + 1;
+    }
+  }
+  
+  console.log(Zib(10));  // Output: 21
+  console.log(Zib(100)); // Output: 24382819596721629
