@@ -42,3 +42,24 @@ function Zib(num) {
   
   console.log(Zib(10));  // Output: 21
   console.log(Zib(100)); // Output: 24382819596721629
+
+  // Finding the largest index for a given Zibonacci result
+function bestZibNum(result) {
+    let index = 0;
+    let currentResult = 1;
+    let previousResult = 0;
+  
+    while (currentResult <= result) {
+      if (currentResult === result) return index;
+      
+      const temp = currentResult;
+      currentResult = currentResult + previousResult + 1;
+      previousResult = temp;
+      index++;
+    }
+  
+    return null;
+  }
+  
+  console.log(bestZibNum(3186)); // Output: 2467
+  console.log(bestZibNum(3183)); // Output: null
