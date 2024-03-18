@@ -41,3 +41,19 @@ function rBinarySearch(arr, value, start = 0, end = arr.length - 1) {
   }
   
   console.log(tarai(10, 2, 9));   // 9
+
+  // String: In-Order Subsets:
+  function strSubsets(str) {
+    if (str.length === 0) {
+      return [''];
+    }
+    
+    const char = str[0];
+    const subsets = strSubsets(str.slice(1));
+    
+    const newSubsets = subsets.map(subset => char + subset);
+    
+    return subsets.concat(newSubsets);
+  }
+  
+  console.log(strSubsets('abc'));   // ['', 'c', 'b', 'bc', 'a', 'ac', 'ab', 'abc']
