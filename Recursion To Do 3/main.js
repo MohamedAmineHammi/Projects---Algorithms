@@ -30,3 +30,14 @@ function rBinarySearch(arr, value, start = 0, end = arr.length - 1) {
   }
   
   console.log(rGCF(123456, 987654));   // 6
+
+  //Tarai Function:
+  function tarai(x, y, z) {
+    if (x <= y) {
+      return y;
+    } else {
+      return tarai(tarai(x - 1, y, z), tarai(y - 1, z, x), tarai(z - 1, x, y));
+    }
+  }
+  
+  console.log(tarai(10, 2, 9));   // 9
