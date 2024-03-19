@@ -23,3 +23,14 @@ function getListLength(node) {
     }
     return dp[n - 1];
   }
+
+  //Collatz-apalooza:
+  function collatzIterations(num) {
+    if (num === 1) {
+      return 0;
+    }
+    if (num % 2 === 0) {
+      return 1 + collatzIterations(num / 2);
+    }
+    return 1 + collatzIterations(3 * num + 1);
+  }
