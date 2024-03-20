@@ -1,0 +1,29 @@
+Recursion To Do 5
+
+
+Rising Squares
+Ever since her dad discovered universal truths about triangles, Sophia Pythagoras has loved square numbers. Given a positive integer, successively print squares of integers up to that integer, first ascending odds, then descending evens. Solve recursively with no loops. 
+
+Ex.: risingSquare(5) returns "1, 9, 25, 16, 4", risingSquare(8) returns "1, 9, 25, 49, 64, 36, 16, 4".
+
+
+
+Binary String Expansion
+You are given a string containing chars ‘0’, ‘1’, and ‘?’. For every ‘?’, either ‘0’ or ‘1’ can be substituted. Write a recursive function to return an array of all valid strings with ‘?’ chars expanded to ‘0’ or ‘1’. binStrExpand("1?0?") => ["1000","1001","1100","1101"]. If you use string functions such as slice(), use them sparingly, as they are expensive.
+
+
+
+String Anagrams
+
+Given a string, return array where each element is a string representing a different anagram (a different sequence of the letters in that string). Example: if given "lim", return ["ilm", "iml", "lim", "lmi", "mil", "mli"]. For this challenge, you can use built-in string functions such as split().
+
+
+
+
+Climbing Stairs
+Speros walks the stairs at the Dojo multiple times every day. Often he takes 2 stairs at a time, to work his quadriceps; he’s just that way. Other days he mixes it up: with every footstep, he randomly chooses to take 1 stair or 2. You are given an integer representing the total number of stairs. Determine all ways to walk the stairs. Given 4, return [[1,1,1,1], [1,1,2], [1,2,1], [2,1,1], [2,2]]. Solve recursively with no loops. And don’t forget to get yourself some exercise during the bootcamp, as well.
+
+Second: assuming you always start with a left foot, return only those ways that end with a right step. So, given 4, you should return [[1,1,1,1], [2,2]].
+
+Third: instead of only returning those that end with a right step, only return those where the total number of steps climbed with left foot equal those climbed with right. So, given 4, you should return [[1,1,1,1], [1,2,1], [2,2]].
+
