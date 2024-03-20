@@ -30,3 +30,23 @@ function risingSquare(n) {
   }
   
   console.log(binStrExpand("1?0?")); // Output: ["1000", "1001", "1100", "1101"]
+
+  //String Anagrams:
+  function stringAnagrams(str) {
+    if (str.length <= 1) {
+      return [str];
+    } else {
+      const anagrams = [];
+      for (let i = 0; i < str.length; i++) {
+        const char = str[i];
+        const remainingChars = str.slice(0, i) + str.slice(i + 1);
+        const subAnagrams = stringAnagrams(remainingChars);
+        for (let j = 0; j < subAnagrams.length; j++) {
+          anagrams.push(char + subAnagrams[j]);
+        }
+      }
+      return anagrams;
+    }
+  }
+  
+  console.log(stringAnagrams("lim")); // Output: ["lim", "lmi", "ilm", "iml", "mli", "mil"]
