@@ -122,3 +122,33 @@ function sumOfSquares(num) {
   }
   
   console.log(uneven(-1845));
+
+  //Generate All Possible Coin Change:
+  function generateAllCoinChange(cents) {
+    const result = [];
+  
+    function backtrack(change, coins, combination) {
+      if (change === 0) {
+        result.push(combination);
+        return;
+      }
+  
+      if (change < 0 || coins.length === 0) {
+        return;
+      }
+  
+      const coin = coins[0];
+      const remainingCoins = coins.slice(1);
+  
+      const maxCount = Math.floor(change / coin);
+      for (let i = 0; i <= maxCount; i++) {
+        const newCombination = { ...combination, [coin]: i };
+        backtrack(change - i * coin, remainingCoins, newCombination);
+      }
+    }
+  
+    backtrack(cents, [25, 10, 5, 1], {});
+    return result;
+  }
+  
+  console.log(generateAllCoinChange(5));
