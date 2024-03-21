@@ -104,3 +104,21 @@ function sumOfSquares(num) {
   }
   
   console.log(restoreIpAddresses('255255255'));
+
+  //Uneven Digits:
+  function uneven(num) {
+    if (num === 0) {
+      return 0;
+    }
+  
+    const digit = num % 10;
+    const remaining = Math.floor(num / 10);
+  
+    if (digit % 2 === 0) {
+      return uneven(remaining);
+    }
+  
+    return uneven(remaining) * 10 + digit;
+  }
+  
+  console.log(uneven(-1845));
