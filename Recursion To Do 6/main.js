@@ -48,3 +48,17 @@ function sumOfSquares(num) {
   }
   
   console.log(generateParentheses(2));
+
+  //Towers of Hanoi:
+  function towersOfHanoi(numDisks, source, auxiliary, destination) {
+    if (numDisks === 1) {
+      console.log(`Move disk 1 from ${source} to ${destination}`);
+      return;
+    }
+  
+    towersOfHanoi(numDisks - 1, source, destination, auxiliary);
+    console.log(`Move disk ${numDisks} from ${source} to ${destination}`);
+    towersOfHanoi(numDisks - 1, auxiliary, source, destination);
+  }
+  
+  towersOfHanoi(6, 'A', 'B', 'C');
