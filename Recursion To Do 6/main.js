@@ -62,3 +62,45 @@ function sumOfSquares(num) {
   }
   
   towersOfHanoi(6, 'A', 'B', 'C');
+
+  //IP Addresses:
+  function restoreIpAddresses(s) {
+    const result = [];
+  
+    function backtrack(remaining, ipAddress, parts) {
+      if (parts === 4 && remaining.length === 0) {
+        result.push(ipAddress);
+        return;
+      }
+  
+      if (parts === 4 || remaining.length === 0) {
+        return;
+      }
+  
+      for (let i = 1; i <= 3; i++) {
+        if (i > remaining.length) {
+          break;
+        }
+  
+        const part = remaining.substring(0, i);
+        if (isValidPart(part)) {
+          const newIpAddress = ipAddress + part + (parts === 3 ? '' : '.');
+          backtrack(remaining.substring(i), newIpAddress, parts + 1);
+        }
+      }
+    }
+  
+    function isValidPart(part) {
+      if (part.length > 1 && part[0] === '0') {
+        return false;
+      }
+  
+      const num = parseInt(part);
+      return num >= 0 && num <= 255;
+    }
+  
+    backtrack(s, '', 0);
+    return result;
+  }
+  
+  console.log(restoreIpAddresses('255255255'));
