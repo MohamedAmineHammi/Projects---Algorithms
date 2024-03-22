@@ -1,0 +1,31 @@
+RecursionTo Do 7
+Some of these end-of-chapter challenges all assume that you have some familiarity with the game chess. If you don’t, here is all you need to know. Chessboards are square, with 8 rows of 8 squares each. Queens are one type of chess piece, and in a single move they can travel any number of squares in either of the horizontal directions (along a row), or either of the vertical directions (along with a file or column), or either of the diagonal directions. A piece is considered under threat from a queen if it is situated in a square where that queen can directly move.
+
+
+
+Is Chess Move Safe
+isChessMoveSafe(intendedMove,queen) returns true if the square is threatened, else false. It takes a location object for both the square to check and the current location of opposing queen.
+
+Second: accept an array of queens.
+
+
+
+All Safe Chess Squares
+Build on your solution to the previous challenge, to create allSafeChessSquares(queen) that returns all chessboard squares not threatened by a given queen.
+
+Second: accept an array of queens.
+
+
+
+Eight Queens
+Build eightQueens () using previous solutions. Return all the arrangements of eight queens on an 8x8 chessboard, so that no queen threatens another. What would be the best way to return these results?
+
+Second : write a helper function that displays the results of the queens located in the returned results board, in astonishingly retro character graphs, using console.log ().
+
+
+
+N Queens
+
+Create nQueens(n,xSize,ySize) using previous work, returning all arrangements of N unthreatened queens on X by Y rectangular board. eightQueens() == nQueens(8,8,8). 
+
+Second: optimize your solution so that you can extend n, xSize, and ySize as far as possible before you exhaust the available memory. Can you get as high as 15 queens on a 15x15 board?
