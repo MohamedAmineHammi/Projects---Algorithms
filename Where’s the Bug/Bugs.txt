@@ -1,0 +1,17 @@
+There are several bugs in the code provided:
+
+Bug in rFib function:
+
+The base case condition should be if (num <= 1) instead of if (num <= 1) { return 1; }. The correct base case should be return num; because rFib(0) and rFib(1) should return 0 and 1 respectively.
+Bug in rListLength function:
+
+The return statement return rListLength(node) + 1; is unreachable because it is placed after the recursive call. It should be removed.
+The base case condition should be if (!node) instead of if (!node) { return 0; }. The correct base case should be return 1; to count the current node.
+Bug in rSigma function:
+
+The function definition is missing an opening curly brace after function rSigma(num).
+The base case condition should be if (num === 0) instead of if (num == 0) { return 0; }. The correct base case should be return 0; because rSigma(0) should return 0.
+Bug in rFactorial function:
+
+The base case condition should be if (num === 0) instead of if (num === 0) {return 0; }. The correct base case should be return 1; because rFactorial(0) should return 1.
+The recursive call should be return rFactorial(num - 1) * num; instead of return rFactorial(num + 1) * num;. The recursive call should be decreasing num by 1, not increasing it.
