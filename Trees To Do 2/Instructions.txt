@@ -1,0 +1,23 @@
+Trees To Do 2
+Add the additional methods discussed to our BST class implementation:
+
+
+
+BST: Height
+Build a height() method on the BST object that returns the total height of the tree – the longest sequence of nodes from the root node to leaf node.
+
+
+
+BST: Is Balanced
+Write isbalanced() method to indicate whether a BST is balanced. For this challenge, consider a tree balanced when all nodes are balanced. A BTNode is balanced if heights of its left subtree and right subtree differ by at most one.
+
+
+
+Array to BST
+Given an array that is sorted in ascending order, return a BST object that is height-balanced.
+
+
+
+Closest Common Ancestor
+Given a BST and two contained values, return the value of the closest common ancestor node. For each node, the chain up to root (including self) represents that node’s ancestry. Return the value of the node in both ancestor chains that is closest to both.
+
