@@ -80,3 +80,25 @@ class BST {
       console.log(node.value);
     }
   }
+
+    // Convert BST to array (in-order traversal)
+    bst2Arr() {
+        const result = [];
+        const stack = [];
+        let current = this.root;
+    
+        while (true) {
+          if (current) {
+            stack.push(current);
+            current = current.left;
+          } else if (stack.length) {
+            current = stack.pop();
+            result.push(current.value);
+            current = current.right;
+          } else {
+            break;
+          }
+        }
+    
+        return result;
+      }
