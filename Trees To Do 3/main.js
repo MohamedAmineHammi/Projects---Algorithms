@@ -58,3 +58,25 @@ class BST {
           if (node.left) stack.push(node.left);
         }
       }
+
+        // Traverse BST in post-order
+  bstPostOrder() {
+    if (!this.root) return;
+
+    const stack1 = [];
+    const stack2 = [];
+    stack1.push(this.root);
+
+    while (stack1.length) {
+      const node = stack1.pop();
+      stack2.push(node);
+
+      if (node.left) stack1.push(node.left);
+      if (node.right) stack1.push(node.right);
+    }
+
+    while (stack2.length) {
+      const node = stack2.pop();
+      console.log(node.value);
+    }
+  }
