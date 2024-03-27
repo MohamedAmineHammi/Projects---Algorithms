@@ -6,3 +6,9 @@ class Node {
       this.right = null;
     }
   }
+
+  // Binary Search Tree class
+class BST {
+    constructor() {
+      this.root = null;
+    }
