@@ -143,3 +143,21 @@ class BST {
 
     return result;
   }
+
+    // Convert BST to singly-linked list (in-order traversal)
+    bst2List() {
+        const dummy = new Node(null);
+        let current = dummy;
+    
+        const traverse = (node) => {
+          if (node) {
+            traverse(node.left);
+            current.next = new Node(node.value);
+            current = current.next;
+            traverse(node.right);
+          }
+        };
+    
+        traverse(this.root);
+        return dummy.next;
+      }
