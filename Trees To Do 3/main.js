@@ -119,3 +119,27 @@ class BST {
 
     return result;
   }
+
+   // Convert BST to array (post-order traversal)
+   bst2ArrPost() {
+    const result = [];
+    const stack1 = [];
+    const stack2 = [];
+
+    if (this.root) stack1.push(this.root);
+
+    while (stack1.length) {
+      const node = stack1.pop();
+      stack2.push(node);
+
+      if (node.left) stack1.push(node.left);
+      if (node.right) stack1.push(node.right);
+    }
+
+    while (stack2.length) {
+      const node = stack2.pop();
+      result.push(node.value);
+    }
+
+    return result;
+  }
