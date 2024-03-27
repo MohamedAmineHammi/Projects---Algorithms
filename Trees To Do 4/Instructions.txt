@@ -1,0 +1,27 @@
+Trees To Do 4
+
+
+BST: Remove
+Remove a given val. Return false if not found.
+
+
+
+BST: Remove All
+Clear all values from the tree.
+
+
+
+BST: Is Valid
+Construct an isValid() method on the BST object to determine whether the tree has a valid structure. Specifically, ensure that all nodes and values are located in the appropriate left or right subtrees. This might be trickier than it seems at first glance. What are a few helpful “invalid tree” test cases?
+
+
+
+BST: Add Without Dupes
+Add a given value only if it is not already found. Return true if added, false otherwise. Remember our Set Theory: this changes our BST from an ordered multiset to an ordered set.
+
+Second: What other methods need changing, if we want our BST to be a true ‘set’? Build those.
+
+
+
+Traverse BST Reverse-Order
+Create bstReverseOrder(BST) that prints the BST’s values; traversed in reverse order. 
