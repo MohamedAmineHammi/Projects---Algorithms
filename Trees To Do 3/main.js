@@ -42,3 +42,19 @@ class BST {
       }
     }
   }
+
+    // Traverse BST in pre-order
+    bstPreOrder() {
+        if (!this.root) return;
+    
+        const stack = [];
+        stack.push(this.root);
+    
+        while (stack.length) {
+          const node = stack.pop();
+          console.log(node.value);
+    
+          if (node.right) stack.push(node.right);
+          if (node.left) stack.push(node.left);
+        }
+      }
