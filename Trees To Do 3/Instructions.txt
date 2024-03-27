@@ -1,0 +1,41 @@
+Trees To Do 3
+
+
+Traverse BST Pre-Order
+Create bstPreOrder(BST) that prints the BST’s values; traversed pre-order.
+
+
+
+Traverse BST Post-Order
+Create bstPostOrder(BST) that prints the BST’s values; traversed post-order.
+
+
+
+BST to Array
+Create bst2Arr(BST) that outputs an array containing a BST’s values, traversed in-order. 
+
+Second: create both bst2ArrPre and bst2ArrPost for those traversal methods. 
+
+Third: refactor to minimize code.
+
+
+
+BST to List
+Create bst2List(BST) that outputs a singly-linked list containing the BST values in-order. 
+
+Second: create both bst2ListPre and bst2ListPost to traverse in those ways.
+
+Third: refactor to minimize code.
+
+
+
+BST: Minimum Height
+
+Build minHeight() method on BST that returns the minimal height – the shortest sequence of nodes from root to any leaf. How does the code compare to that of height()?
+
+
+
+Traverse BST Pre-Order, No Recursion
+Given a BST object, console.log its values in pre-order, without using recursion.
+
+
