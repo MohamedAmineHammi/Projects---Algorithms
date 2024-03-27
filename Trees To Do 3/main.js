@@ -102,3 +102,20 @@ class BST {
     
         return result;
       }
+
+        // Convert BST to array (pre-order traversal)
+  bst2ArrPre() {
+    const result = [];
+    const stack = [];
+    if (this.root) stack.push(this.root);
+
+    while (stack.length) {
+      const node = stack.pop();
+      result.push(node.value);
+
+      if (node.right) stack.push(node.right);
+      if (node.left) stack.push(node.left);
+    }
+
+    return result;
+  }
