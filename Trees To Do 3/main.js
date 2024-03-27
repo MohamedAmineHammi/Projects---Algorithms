@@ -179,3 +179,21 @@ class BST {
     traverse(this.root);
     return dummy.next;
   }
+
+    // Convert BST to singly-linked list (post-order traversal)
+    bst2ListPost() {
+        const dummy = new Node(null);
+        let current = dummy;
+    
+        const traverse = (node) => {
+          if (node) {
+            traverse(node.left);
+            traverse(node.right);
+            current.next = new Node(node.value);
+            current = current.next;
+          }
+        };
+    
+        traverse(this.root);
+        return dummy.next;
+      }
