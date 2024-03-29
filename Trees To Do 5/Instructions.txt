@@ -1,0 +1,36 @@
+Trees To Do 5
+Add these methods that (might) benefit from in-order traversal.
+
+An alternate way to implement these is to add an attribute .parent. If you add this attribute, consider how you would need to change the other BST methods you’ve built to date.
+
+ 
+
+BST: Val Before
+Create a BST method that, given a value that may or may not be in the tree, returns the value that is most immediately smaller. Examples: for tree {2,5,8}, valBefore(3) returns 2, and valBefore(8) returns 5.
+
+
+
+BST: Val After
+Write a method on the BST class that returns the value immediately following the given one, even if that given value is not  contained in the tree. Examples: for tree {2,5,8}, valAfter(3) returns 5; valAfter(8) returns null.
+
+
+
+BTNode: Node Before
+Create a BTNode method that, given a node that is in the BST, returns a pointer to the node with the most immediately smaller value. Examples: for tree {2,5,8}, nodeBefore(node5) returns the node containing 2; nodeBefore(node8) returns the node containing 5.
+
+
+
+BTNode: Node After
+Parallel to nodeBefore, write a BTNode method that returns the node immediately following the given node (which is guaranteed to be in the tree). Examples: for tree {2,5,8}, calling nodeAfter(node2) returns the node containing 5; nodeAfter(node8) returns null.
+
+
+
+BST: Closest Value
+Create BST method closestValue(val) to return the value contained in a BST that is closest to the given val. This could be the exact value (if tree contains it), or one that is greater or less than val. Take care: there is no guarantee that closest value is direct parent, grandparent, child, grandchild, etc.
+
+
+
+Tree Path Contains Sum
+Dado un árbol binario (no necesariamente una BST) que contiene números y una suma, ¿puedes determinar si el árbol tiene una ruta de raíz a hoja que, si sumas los valores de esos nodos, es igual a la suma? Devuelve un booleano. Si un nodo en particular tiene (por ejemplo) un hijo izquierdo, pero no un hijo derecho, puedes considerarlo una hoja.
+
+Segundo: en lugar de devolver un valor booleano, devuelve una matriz de todas las rutas de raíz a hoja que sumen igual.
