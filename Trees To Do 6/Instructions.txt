@@ -1,0 +1,15 @@
+Trees To Do 6
+
+
+BST With Parent
+Create a BTNode2 data structure (and the necessary changes for an accompanying BST2) that adds a .parent. When is it more optimal? Is it worth the trouble? Work out the changes to prove it to yourself!
+
+
+
+Sum of BST Root-Leaf Numbers
+Given a binary tree (not necessarily a BST) that contains values between 0 and 9, we consider the digits encountered in order when traversing from root-to-leaf to be that path’s root-leaf number. The root-leaf path 4->2->3 represents the root-leaf number 423. Find the sum of all root-leaf numbers found in the provided binary tree.
+
+
+
+Left-Side Binary Tree
+Given a binary tree, create and return an array containing the values that you would see if you metaphorically stood to the left of the tree and looked sideways at it. You will see the root, of course, plus only the leftmost of children at each level.
