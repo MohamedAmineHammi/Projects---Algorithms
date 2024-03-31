@@ -117,3 +117,30 @@ class BSTNode {
   
     return minDiff;
   }
+
+  //BST: Closest Value:
+  class BSTNode {
+    constructor(value) {
+      this.value = value;
+      this.left = null;
+      this.right = null;
+    }
+  }
+  
+  function closestValue(root, target) {
+    let closest = root.value;
+  
+    while (root !== null) {
+      if (Math.abs(target - root.value) < Math.abs(target - closest)) {
+        closest = root.value;
+      }
+  
+      if (target < root.value) {
+        root = root.left;
+      } else {
+        root = root.right;
+      }
+    }
+  
+    return closest;
+  }
