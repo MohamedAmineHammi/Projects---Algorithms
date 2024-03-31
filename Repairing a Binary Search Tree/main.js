@@ -171,3 +171,25 @@ class BSTNode {
   
     return closest;
   }
+
+  //SList: Closest Value
+  class ListNode {
+    constructor(value) {
+      this.value = value;
+      this.next = null;
+    }
+  }
+  
+  function closestValue(head, target) {
+    let closest = head.value;
+    let curr = head;
+  
+    while (curr !== null) {
+      if (Math.abs(target - curr.value) < Math.abs(target - closest)) {
+        closest = curr.value;
+      }
+      curr = curr.next;
+    }
+  
+    return closest;
+  }
