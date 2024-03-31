@@ -193,3 +193,26 @@ class BSTNode {
   
     return closest;
   }
+
+  //DList: Closest Value
+  class DListNode {
+    constructor(value) {
+      this.value = value;
+      this.prev = null;
+      this.next = null;
+    }
+  }
+  
+  function closestValue(head, target) {
+    let closest = head.value;
+    let curr = head;
+  
+    while (curr !== null) {
+      if (Math.abs(target - curr.value) < Math.abs(target - closest)) {
+        closest = curr.value;
+      }
+      curr = curr.next;
+    }
+  
+    return closest;
+  }
