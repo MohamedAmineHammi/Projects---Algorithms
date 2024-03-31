@@ -94,3 +94,29 @@ class BSTNode {
   
     return node;
   }
+
+  //BST: Reverse:
+  class BSTNode {
+    constructor(value) {
+      this.value = value;
+      this.left = null;
+      this.right = null;
+    }
+  }
+  
+  function reverseBST(tree) {
+    reverseBSTHelper(tree.root);
+  }
+  
+  function reverseBSTHelper(node) {
+    if (node === null) {
+      return;
+    }
+  
+    const temp = node.left;
+    node.left = node.right;
+    node.right = temp;
+  
+    reverseBSTHelper(node.left);
+    reverseBSTHelper(node.right);
+  }
