@@ -1,0 +1,19 @@
+BST Partitioning
+Sometimes it is necessary to divide a BST into two. To accomplish this, we might want to split the BST around a specific value, or we might simply approximate a value that would put around half the values on one side and around half on the other. Similar to how we might divide, or partition, a linked list into two separate linked lists, likewise when we partition a BST we want the result to be two different nonoverlapping BSTs, where every node in the previous BST is contained in one of the resultant BST's.
+
+
+
+BST: Partition Around Value
+Create a method BST.partition(value) where a BST object partitions itself around the given value (whether or not that value is found in the tree). The BST should change itself appropriately, as well as return a new tree object containing all other nodes. Remember, the ranges of the two BST objects should not overlap (the max() of one should be less than the min() of the other).
+
+
+
+BST: Partition Evenly
+Create a standalone function that, given a valid BST, partitions the tree evenly into two distinct BST's. As in the previous challenge, change the given BST to become one of the resultant BSTs, and return the other. The two resultant trees should be valid and non-overlapping.
+
+Second: if we don’t pay attention to balance, the two resultant BSTs might be tall and thin. To improve performance, make both subtrees a bit more balanced before returning them.
+
+ 
+
+BST: Reverse
+Create a standalone function that accepts a BST object and reverses it. A reversed BST has its highest values in leftmost children, and its lowest values in rightmost children (root would be unchanged).
