@@ -64,3 +64,36 @@ class BSTNode {
   
     return node;
   }
+
+  //BST: Smallest Difference:
+  class BSTNode {
+    constructor(value) {
+      this.value = value;
+      this.left = null;
+      this.right = null;
+    }
+  }
+  
+  function smallestDifference(root) {
+    let prev = null;
+    let minDiff = Infinity;
+  
+    inorderTraversal(root, node => {
+      if (prev !== null) {
+        minDiff = Math.min(minDiff, node.value - prev.value);
+      }
+      prev = node;
+    });
+  
+    return minDiff;
+  }
+  
+  function inorderTraversal(node, visit) {
+    if (node === null) {
+      return;
+    }
+  
+    inorderTraversal(node.left, visit);
+    visit(node);
+    inorderTraversal(node.right, visit);
+  }
