@@ -144,3 +144,30 @@ class BSTNode {
   
     return closest;
   }
+
+  //Array: Closest Value
+  function closestValue(arr, target) {
+    let low = 0;
+    let high = arr.length - 1;
+    let closest = arr[low];
+  
+    while (low <= high) {
+      const mid = Math.floor((low + high) / 2);
+  
+      if (arr[mid] === target) {
+        return arr[mid];
+      }
+  
+      if (Math.abs(target - arr[mid]) < Math.abs(target - closest)) {
+        closest = arr[mid];
+      }
+  
+      if (arr[mid] < target) {
+        low = mid + 1;
+      } else {
+        high = mid - 1;
+      }
+    }
+  
+    return closest;
+  }
