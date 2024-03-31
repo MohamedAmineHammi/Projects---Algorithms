@@ -97,3 +97,23 @@ class BSTNode {
     visit(node);
     inorderTraversal(node.right, visit);
   }
+
+  //SList: Smallest Difference:
+  class ListNode {
+    constructor(value) {
+      this.value = value;
+      this.next = null;
+    }
+  }
+  
+  function smallestDifference(head) {
+    let minDiff = Infinity;
+    let curr = head;
+  
+    while (curr !== null && curr.next !== null) {
+      minDiff = Math.min(minDiff, Math.abs(curr.value - curr.next.value));
+      curr = curr.next;
+    }
+  
+    return minDiff;
+  }
