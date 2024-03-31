@@ -1,0 +1,39 @@
+Repairing a Binary Search Tree
+If it is possible with isValid() to detect whether a BTNode is in an incorrect location, then it should also be possible to repair an invalid BST. Unfortunately, once we find an invalid node, we have no guarantee about the nodes below it – so our only recourse is to reinsert all of the subtree nodes (not just the one node we found to be invalid).
+
+
+
+BST: Repair
+Sometimes it is hard to find good help. Oscar is working with a third-party library that receives data from outside sources and sorts it into a binary search tree. Oscar is positive the library has bugs because sometimes the BSTs it produces don’t meet the requirements of a BST. Given a potentially invalid BST object, create a standalone function bstRepair(BST) that rearranges nodes as needed to make it valid. Return true if you repaired the BST, or false if this was not needed.
+
+
+
+BST: Smallest Difference
+Given a valid BST, return the smallest difference between any two values in the tree. What are the runtime and space complexities of your solution? Would it be less efficient if BST was very unbalanced?
+
+
+
+SList: Smallest Difference
+Given a sorted singly linked list, return the smallest difference between values. What are the run-time and space complexities of your solution?
+
+
+
+BST: Closest Value (again)
+Given valid BST and number, return the tree value closest to that number. What are the runtime and space complexities of your solution?
+
+
+
+Array: Closest Value
+Given sorted array and number, return the array value closest to that number. What are the runtime and space complexities of your solution?
+
+
+
+SList: Closest Value
+Given sorted SList and number, return the list value closest to that number. What are the runtime and space complexities of your solution?
+
+
+
+DList: Closest Value
+Given sorted DList and number, return the list value closest to that number. What are the runtime and space complexities of your solution?
+
+For this particular problem, which of the data structures mentioned above will most likely lead to an optimal performance in finding the closest value, across a diverse dataset? How would you pre-process the values – potentially storing them in a different data structure – if optimal run-time performance was your primary goal, and you were willing to consume significant amounts of memory in order to achieve it?
