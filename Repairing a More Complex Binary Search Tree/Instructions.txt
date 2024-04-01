@@ -1,0 +1,19 @@
+Repairing a More Complex Binary Search Tree
+Refer to the BST2 and BTNode2 data structures, from our earlier BST chapter. We based BTNode2 on BTNode, simply adding a .parent pointer; a BST2 is merely a BST, plus necessary code to use and maintain .parent in the BTNode2 objects it contains. As a result, invalid BST2s include not only those with incorrectly located nodes, but also those with defective pointer values (e.g.: a child’s .parent doesn’t point back, or node pointers create a loop!).
+
+
+
+BST: Kth-Biggest
+Given a valid Binary Search Tree, find the Kth-largest element contained in that tree.
+
+Second: if above you took advantage of the .size() method, write a version without it. If you did not use .size() originally, write a version that does.
+
+
+
+Test Cases for BST2 Repair
+In the challenge following this one, we will write code to detect and repair a potentially invalid BST2. Before you start that, here is a related challenge: what test cases would you create to ensure that your solution detects and correctly fixes the possible error cases? For this challenge, a test case is a BST that you send to bst2Repair(BST2).
+
+
+
+BST2: Repair
+Given a potentially invalid BST2, create standalone function bst2Repair(BST2) to detect whether it is invalid. If so, fix it and return true (if not, return false). Potential problems include incorrectly placed nodes, as well as incorrect pointers (.parent, .left, .right) that create loops, etc.
