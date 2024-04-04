@@ -54,3 +54,32 @@ class Node {
       return this.size;
     }
   }
+
+  function compareStacks(stack1, stack2) {
+    if (stack1.getSize() !== stack2.getSize()) {
+      return false;
+    }
+  
+    const tempStack = new SLStack();
+  
+    let equal = true;
+    while (!stack1.isEmpty()) {
+      const value1 = stack1.pop();
+      const value2 = stack2.pop();
+  
+      if (value1 !== value2) {
+        equal = false;
+      }
+  
+      tempStack.push(value1);
+      tempStack.push(value2);
+    }
+  
+    // Restore the original stacks
+    while (!tempStack.isEmpty()) {
+      stack2.push(tempStack.pop());
+      stack1.push(tempStack.pop());
+    }
+  
+    return equal;
+  }
