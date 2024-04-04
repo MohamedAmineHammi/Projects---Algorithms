@@ -83,3 +83,28 @@ class Node {
   
     return equal;
   }
+
+  // Create two sample stacks
+const stack1 = new SLStack();
+stack1.push(1);
+stack1.push(2);
+stack1.push(3);
+
+const stack2 = new SLStack();
+stack2.push(1);
+stack2.push(2);
+stack2.push(3);
+
+// Test SLStack methods
+console.log(stack1.top()); // Output: 3
+console.log(stack1.isEmpty()); // Output: false
+console.log(stack1.pop()); // Output: 3
+console.log(stack1.contains(2)); // Output: true
+console.log(stack1.getSize()); // Output: 2
+
+// Test compareStacks function
+console.log(compareStacks(stack1, stack2)); // Output: true
+
+stack2.push(4);
+
+console.log(compareStacks(stack1, stack2)); // Output: false
