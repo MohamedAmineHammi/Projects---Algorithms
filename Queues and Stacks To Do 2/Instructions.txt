@@ -1,0 +1,38 @@
+Queues and Stacks To Do 2
+In the code you’ve written the past few days, you may have seen the significant similarity between Queues and Stacks. Today, along with other challenges, we will use that similarity to our advantage, reducing our code footprint.
+
+
+
+Stack: Copy
+Given a Stack, create a new second Stack and copy values from the first Stack into the second Stack, so they pop in the same order. Use only one Queue for additional storage, and only public Stack/Queue interfaces.
+
+
+
+Create Queue Using Two Stacks
+Using only two Stack objects for the underlying data storage, recreate a Queue class.
+
+
+
+Queue: Is Palindrome
+Given a Queue, return true if its values are a palindrome (if they are same in reverse order), else return false. Restore Queue to the original state before exiting. For storage, use one additional Stack.
+
+
+
+Stack / Queue Code-Sharing
+As a design exercise, think through how you would combine the SLQueue you wrote previously with the SLStack class you just created. Would you use the object-oriented design? If so, which class inherits from which? Is there a parent class that is neither?
+
+Once you’ve done the thought work, now it is time to code it: rework what you wrote for SLQueue and SLStack (or start from scratch, calling these SLQueue2 and SLStack2) with code sharing in mind. When you are done, someone should be able to create new queue and stack objects and use all the methods for those classes. Your combined codebase should be only about 15% larger than SLQueue!
+
+
+
+Deque: Implementation
+Having combined the designs of Stack and Queue, why not combine features as well. Let’s create a class Deque (pronounced ‘deck’) representing a double-ended queue. On top of the basic six methods, enable it to push and pop from opposite ends. Specifically, build class Deque with pushFront(val), pushBack(val), popFront(), popBack(), front(), back(), contains(val), isEmpty(), and size().
+
+
+
+Stack: Remove Stack Min
+Remove a Stack’s minimum value, otherwise leaving values in order. If duplicate min values are found, remove them all (see below). Use only one additional Queue (plus primitive local vars) for storage.
+
+
+Bonus: Create removeNewestMin() and removeOldestMin() that remove only one min value.
+
