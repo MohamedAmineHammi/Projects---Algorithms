@@ -1,0 +1,41 @@
+Queues and Stacks To Do 3
+
+
+CirQueue: Front
+Return (not remove) the queue’s front value.
+
+
+
+CirQueue: Is Empty
+Return whether queue is empty.
+
+
+
+CirQueue: Is Full
+Return whether queue is full.
+
+
+
+CirQueue: Size
+Return number of queued vals (not capacity).
+
+
+
+CirQueue: Enqueue
+Create enqueue(val) that adds val to our CirQueue, or returns false. Wrap if needed!
+
+
+
+CirQueue: Dequeue
+Create CirQueue method dequeue() that removes/returns front value, or null on fail.
+
+
+
+
+CirQueue: Contains
+Return whether given val is within the queue.
+
+
+
+CirQueue: Grow
+(Advanced) Create method grow(newSize) that expands a CirQueue to a new given size.
