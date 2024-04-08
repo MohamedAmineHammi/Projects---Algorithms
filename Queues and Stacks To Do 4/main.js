@@ -112,3 +112,22 @@ function reorderAbsoluteQueue(queue) {
   
     return stack;
   }
+
+  //Weak Finger:
+  function countFingers(weakFinger, weakFingerUsage) {
+    const sequence = [1, 2, 3, 4, 5, 4, 3, 2, 1];
+    let count = 0;
+    let remainingUsage = weakFingerUsage;
+  
+    for (let i = 0; i < sequence.length; i++) {
+      if (sequence[i] === weakFinger) {
+        remainingUsage--;
+        if (remainingUsage === -1) {
+          break;
+        }
+      }
+      count++;
+    }
+  
+    return count;
+  }
