@@ -66,3 +66,24 @@ function reorderAbsoluteQueue(queue) {
   
     return true;
   }
+
+  //Stack: Switch Pairs:
+  function switchPairs(stack) {
+    const queue = new Queue();
+  
+    while (!stack.isEmpty()) {
+      queue.enqueue(stack.pop());
+    }
+  
+    while (!queue.isEmpty()) {
+      const first = queue.dequeue();
+      if (!queue.isEmpty()) {
+        const second = queue.dequeue();
+        stack.push(second);
+      }
+      stack.push(first);
+    }
+  
+    return stack;
+  }
+  
