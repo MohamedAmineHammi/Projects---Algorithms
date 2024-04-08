@@ -40,3 +40,29 @@ function reorderAbsoluteQueue(queue) {
   
     return stack;
   }
+
+  //Stack: Is Sorted:
+  function isStackSorted(stack) {
+    const tempStack = new Stack();
+    let prev = stack.pop();
+  
+    while (!stack.isEmpty()) {
+      const current = stack.pop();
+  
+      if (current > prev) {
+        while (!tempStack.isEmpty()) {
+          stack.push(tempStack.pop());
+        }
+        return false;
+      }
+  
+      tempStack.push(prev);
+      prev = current;
+    }
+  
+    while (!tempStack.isEmpty()) {
+      stack.push(tempStack.pop());
+    }
+  
+    return true;
+  }
