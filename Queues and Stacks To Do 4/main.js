@@ -87,3 +87,28 @@ function reorderAbsoluteQueue(queue) {
     return stack;
   }
   
+  //Stack: Mirror:
+  function mirrorStack(stack) {
+    const tempStack = new Stack();
+  
+    while (!stack.isEmpty()) {
+      const num = stack.pop();
+      tempStack.push(num);
+    }
+  
+    while (!tempStack.isEmpty()) {
+      stack.push(tempStack.pop());
+    }
+  
+    while (!stack.isEmpty()) {
+      const num = stack.pop();
+      tempStack.push(num);
+      stack.push(num);
+    }
+  
+    while (!tempStack.isEmpty()) {
+      stack.push(tempStack.pop());
+    }
+  
+    return stack;
+  }
