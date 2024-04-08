@@ -20,3 +20,23 @@ function reorderAbsoluteQueue(queue) {
   
     return queue;
   }
+
+  //Stack: Partition:
+  function partitionStack(stack) {
+    const queue = new Queue();
+  
+    while (!stack.isEmpty()) {
+      const num = stack.pop();
+      if (num <= 0) {
+        queue.enqueue(num);
+      } else {
+        stack.push(num);
+      }
+    }
+  
+    while (!queue.isEmpty()) {
+      stack.push(queue.dequeue());
+    }
+  
+    return stack;
+  }
