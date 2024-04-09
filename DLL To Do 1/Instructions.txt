@@ -1,0 +1,24 @@
+DLL To Do 1
+SList: Reverse
+Reverse the node sequence. Given an SList object, the .head property should point to the previously-last node, and the rest of the nodes should follow similarly from back to front.
+
+
+
+SList: Kth-Last Node
+Given k, return the value that is ‘k’ nodes from the list’s end. If given (list,1), return the list’s last value. If given (list,4), return the value at the node that has exactly 3 nodes following it.
+
+
+
+SList: SList: Is Palindrome
+Return whether a list is a palindrome. String palindromes read the same front-to-back and back-to-front. Here, compare node values. N.B.: to be accurate in JavaScript, use === instead of ==, since 1 == true == [1] == "1".
+
+Second: you may not have plentiful memory. Can you solve this without an additional array?
+
+
+
+SList: Shift Right
+
+Given a list, shift nodes to the right, by a given number shiftBy. These shifts are circular: when shifting a node off list’s end, it reappears at list’s start. For list a=>b=>c, shift(1) should return c=>a=>b.
+
+Second: also handle negative shiftBy (to left).
+
