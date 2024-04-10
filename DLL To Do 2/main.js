@@ -36,3 +36,38 @@ class ListNode {
   
   const sumList = sumNumerals(list1, list2);
   console.log(sumList); // Output: ListNode { value: 0, next: ListNode { value: 5, next: ListNode { value: 1, next: null } } }
+
+  //Challenge 2: SList - Setup Loop
+  class ListNode {
+    constructor(value) {
+      this.value = value;
+      this.next = null;
+    }
+  }
+  
+  function setupLoop(totalNodes, loopNodeNumber) {
+    if (totalNodes <= 0 || loopNodeNumber <= 0 || loopNodeNumber > totalNodes) {
+      return null;
+    }
+  
+    let head = new ListNode(1);
+    let current = head;
+  
+    // Create the nodes without forming a loop
+    for (let i = 2; i <= totalNodes; i++) {
+      current.next = new ListNode(i);
+      current = current.next;
+    }
+  
+    let loopNode = head;
+    while (loopNode.next) {
+      if (loopNode.value === loopNodeNumber) {
+        current.next = loopNode;
+        break;
+      }
+      loopNode = loopNode.next;
+    }
+  
+    return head;
+  }
+  
