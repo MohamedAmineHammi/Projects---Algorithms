@@ -102,3 +102,36 @@ class ListNode {
   
     return head;
   }
+
+  //Challenge 4: SList - Unflatten Children
+  class ListNode {
+    constructor(value) {
+      this.value = value;
+      this.next = null;
+      this.child = null;
+    }
+  }
+  
+  function unflattenChildren(head) {
+    let current = head;
+  
+    while (current) {
+      if (current.child) {
+        let childList = current.child;
+        while (childList.next) {
+          childList.prev = current;
+          childList = childList.next;
+        }
+        childList.next = current.next;
+        if (current.next) {
+          current.next.prev = childList;
+        }
+        current.next = current.child;
+        current.child.prev = current;
+        current.child = null;
+      }
+      current = current.next;
+    }
+  
+    return head;
+  }
