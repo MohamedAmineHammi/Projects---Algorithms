@@ -71,3 +71,34 @@ class ListNode {
     return head;
   }
   
+//Challenge 3: SList - Flatten Children
+class ListNode {
+    constructor(value) {
+      this.value = value;
+      this.next = null;
+      this.child = null;
+    }
+  }
+  
+  function flattenChildren(head) {
+    let current = head;
+  
+    while (current) {
+      if (current.child) {
+        let childList = current.child;
+        while (childList.next) {
+          childList = childList.next;
+        }
+        childList.next = current.next;
+        if (current.next) {
+          current.next.prev = childList;
+        }
+        current.next = current.child;
+        current.child.prev = current;
+        current.child = null;
+      }
+      current = current.next;
+    }
+  
+    return head;
+  }
