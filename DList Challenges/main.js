@@ -173,3 +173,19 @@ function prependValue(dlist, newVal, existingVal) {
     tail.next = null;
     dlist.tail = tail;
   }
+
+  //DList: Reverse
+  function reverseDList(dlist) {
+    let current = dlist.head;
+    let prev = null;
+    
+    while (current) {
+      const next = current.next;
+      current.next = prev;
+      current.prev = next;
+      prev = current;
+      current = next;
+    }
+    
+    dlist.tail = dlist.head
+}
