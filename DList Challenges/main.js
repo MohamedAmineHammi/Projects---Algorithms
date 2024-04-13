@@ -79,3 +79,33 @@ function prependValue(dlist, newVal, existingVal) {
     
     return true;
   }
+
+  //DList: Loop Start
+  function findLoopStart(dlist) {
+    let slow = dlist.head;
+    let fast = dlist.head;
+    let loopExists = false;
+    
+    while (fast && fast.next) {
+      slow = slow.next;
+      fast = fast.next.next;
+      
+      if (slow === fast) {
+        loopExists = true;
+        break;
+      }
+    }
+    
+    if (!loopExists) {
+      return null;
+    }
+    
+    slow = dlist.head;
+    
+    while (slow !== fast) {
+      slow = slow.next;
+      fast = fast.next;
+    }
+    
+    return slow;
+  }
