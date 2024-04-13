@@ -41,3 +41,24 @@ function prependValue(dlist, newVal, existingVal) {
     
     return slow.value;
   }
+
+  //DList: Is Valid
+  function isValidDList(dlist) {
+    let current = dlist.head;
+    let prev = null;
+    
+    while (current) {
+      if (current.prev !== prev || (current.next && current.next.prev !== current)) {
+        return false; // Invalid pointers
+      }
+      
+      if (current === dlist.head && current.prev !== null) {
+        return false; // Head should have null prev
+      }
+      
+      prev = current;
+      current = current.next;
+    }
+    
+    return true;
+  }
