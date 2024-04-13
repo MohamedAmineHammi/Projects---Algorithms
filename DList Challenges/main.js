@@ -133,3 +133,13 @@ function prependValue(dlist, newVal, existingVal) {
       current = current.next;
     }
   }
+
+  //DList: Delete Middle Node
+  function deleteMiddleNode(node) {
+    if (node === null || node.prev === null || node.next === null) {
+      return; // Invalid node
+    }
+    
+    node.prev.next = node.next;
+    node.next.prev = node.prev;
+  }
