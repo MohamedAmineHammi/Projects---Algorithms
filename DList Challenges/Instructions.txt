@@ -1,0 +1,58 @@
+DList Challenges
+Take on as many DList challenges as possible, before next chapter starts!
+
+
+
+DList: Prepend Value
+Given DList, new val, and existing val, insert new val into DList before existing val.
+
+
+
+DList: Kth-to-Last Value
+Given k, return the value ‘k’ from a DList’s end.
+
+
+
+DList: Is Valid
+Determine whether given DList is valid: whether next and prev pointers match, no loops, etc.
+
+
+
+DList: Palindrome
+Determine whether a DList is a palindrome.
+
+
+
+DList: Loop Start
+Given DList that may contain a loop, return node where loop begins (or null if no loop).
+
+
+
+DList: Append Value
+Given DList, new val, and existing val, insert new val into DList after existing val.
+
+
+
+DList: Delete Middle Node
+Given node in the middle of a DList, remove it.
+
+
+
+DList: Partition
+Given DList and partition val, perform a simple partition (no need to return the pivot index).
+
+
+
+DList: Reverse
+Create a function to reverse nodes in a DList.
+
+
+
+DList: Break Loop
+Given DList that may contain a loop, break the loop while retaining original node order.
+
+
+
+DList: Repair
+Combine previous work with a function that fixes errors found by isValid and breaks loops.
+
