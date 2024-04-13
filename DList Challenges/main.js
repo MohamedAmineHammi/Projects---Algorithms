@@ -62,3 +62,20 @@ function prependValue(dlist, newVal, existingVal) {
     
     return true;
   }
+
+  //DList: Palindrome
+  function isPalindromeDList(dlist) {
+    let forward = dlist.head;
+    let backward = dlist.tail;
+    
+    while (forward !== backward && forward.prev !== backward) {
+      if (forward.value !== backward.value) {
+        return false;
+      }
+      
+      forward = forward.next;
+      backward = backward.prev;
+    }
+    
+    return true;
+  }
