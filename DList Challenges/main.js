@@ -143,3 +143,33 @@ function prependValue(dlist, newVal, existingVal) {
     node.prev.next = node.next;
     node.next.prev = node.prev;
   }
+
+  //DList: Partition
+  function partitionDList(dlist, partitionVal) {
+    let current = dlist.head;
+    let tail = dlist.head;
+    
+    while (current) {
+      const next = current.next;
+      
+      if (current.value < partitionVal) {
+        current.next = dlist.head;
+        current.prev = null;
+        
+        if (dlist.head !== null) {
+          dlist.head.prev = current;
+        }
+        
+        dlist.head = current;
+      } else {
+        current.prev = tail;
+        tail.next = current;
+        tail = current;
+      }
+      
+      current = next;
+    }
+    
+    tail.next = null;
+    dlist.tail = tail;
+  }
