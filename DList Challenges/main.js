@@ -109,3 +109,27 @@ function prependValue(dlist, newVal, existingVal) {
     
     return slow;
   }
+
+  //DList: Append Value
+  function appendValue(dlist, newVal, existingVal) {
+    const newNode = new Node(newVal);
+    let current = dlist.head;
+    
+    while (current) {
+      if (current.value === existingVal) {
+        newNode.prev = current;
+        newNode.next = current.next;
+        current.next = newNode;
+        
+        if (current === dlist.tail) {
+          dlist.tail = newNode;
+        } else {
+          newNode.next.prev = newNode;
+        }
+        
+        return;
+      }
+      
+      current = current.next;
+    }
+  }
