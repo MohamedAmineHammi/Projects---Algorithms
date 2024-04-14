@@ -130,3 +130,25 @@ function bubbleSortArray(arr) {
     
     return sortedHead;
   }
+
+  //Multikey Sort for an Array:
+  function multikeySortArray(arr) {
+    arr.sort(function(a, b) {
+      if (a.lastName === b.lastName) {
+        return a.firstName.localeCompare(b.firstName);
+      } else {
+        return a.lastName.localeCompare(b.lastName);
+      }
+    });
+    
+    return arr;
+  }
+  
+  // Example usage:
+  var peopleArray = [
+    { firstName: 'Lee', lastName: 'Abbey' },
+    { firstName: 'Aaron', lastName: 'Carnevale' },
+    { firstName: 'Giorgio', lastName: 'Carnevale' }
+  ];
+  var sortedArray = multikeySortArray(peopleArray);
+  console.log(sortedArray);
