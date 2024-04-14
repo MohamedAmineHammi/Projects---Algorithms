@@ -1,0 +1,28 @@
+Bubble & Selection
+We start with the first sorting algorithms programming students learn – Bubble and Selection.
+
+
+
+Array: Bubble Sort
+For review, create a function that uses BubbleSort to sort an unsorted array in-place.
+
+
+
+
+SList: Bubble Sort
+Create a function that uses BubbleSort to sort a linked list. The list nodes contain .val, .next and other attributes you should not reference.
+
+
+
+Array: Selection Sort
+For review, create a function that uses SelectionSort to sort an unsorted array in-place.
+
+
+
+SList: Selection Sort
+Create a function that sorts a singly linked list using selection sort. Nodes contain .val, .next and other attributes you should not reference.
+
+
+
+Multikey Sort
+For this challenge, you will sort an array, however, the items in the array are not simple numbers. Given an array of objects, where each object contains a .firstName and a .lastName, sort the array by both last name (primary) and first name (secondary). Lee Abbey should be sorted before Aaron Carnevale, and Aaron Carnevale should be sorted before his brother Giorgio Carnevale.
