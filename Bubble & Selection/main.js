@@ -85,3 +85,48 @@ function bubbleSortArray(arr) {
     
     return arr;
   }
+
+  //Selection Sort for a Singly Linked List:
+  function selectionSortLinkedList(head) {
+    if (!head || !head.next) {
+      return head;
+    }
+    
+    var sortedHead = null;
+    var sortedTail = null;
+    var current = head;
+    
+    while (current) {
+      var min = current;
+      var minPrev = null;
+      var prev = current;
+      var next = current.next;
+      
+      while (next) {
+        if (next.val < min.val) {
+          min = next;
+          minPrev = prev;
+        }
+        
+        prev = next;
+        next = next.next;
+      }
+      
+      if (minPrev) {
+        minPrev.next = min.next;
+      } else {
+        current = current.next;
+      }
+      
+      if (sortedTail) {
+        sortedTail.next = min;
+      } else {
+        sortedHead = min;
+      }
+      
+      sortedTail = min;
+      sortedTail.next = null;
+    }
+    
+    return sortedHead;
+  }
