@@ -41,3 +41,35 @@ function insertionSort(arr) {
   const arr2 = [2, 4, 6];
   combineArrs(arr1, arr2);
   console.log(arr1);
+
+  //SList: Insertion Sort
+  class ListNode {
+    constructor(val = 0, next = null) {
+      this.val = val;
+      this.next = next;
+    }
+  }
+  
+  function insertionSortLinkedList(head) {
+    if (!head || !head.next) {
+      return head;
+    }
+  
+    const dummy = new ListNode();
+    let curr = head;
+  
+    while (curr) {
+      const nextNode = curr.next;
+      let prev = dummy;
+  
+      while (prev.next && prev.next.val < curr.val) {
+        prev = prev.next;
+      }
+  
+      curr.next = prev.next;
+      prev.next = curr;
+      curr = nextNode;
+    }
+  
+    return dummy.next;
+  }
