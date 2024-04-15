@@ -1,0 +1,21 @@
+Sorts To Do 1
+
+
+Array: Insertion Sort
+Create a function that InsertionSort to sort an unsorted array in-place. What is the run-time complexity? What is the space complexity?
+
+
+
+Array: Combine
+Create function combineArrs(arr1,arr2) that sorts two already separately sorted arrays, placing the result back into the first provided array. Can you work completely in-place?
+
+
+
+SList: Insertion Sort
+Use InsertionSort to sort singly linked lists. Only reference ListNode attributes .val and .next. What are the run-time and space complexities?
+
+
+
+SList: Combine
+Create a function that combines two already-sorted linked lists, returning a sorted list with both inputs. List nodes contain .val, .next and other attributes that you should not reference.
+
