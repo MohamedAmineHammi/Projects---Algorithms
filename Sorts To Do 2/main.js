@@ -68,3 +68,40 @@ class ListNode {
     [arr[start], arr[i]] = [arr[i], arr[start]];
     return i;
   }
+
+  //SList: Partition
+  class ListNode {
+    constructor(val, next = null) {
+      this.val = val;
+      this.next = next;
+    }
+  }
+  
+  function partitionList(head) {
+    if (!head || !head.next) {
+      return head;
+    }
+  
+    const pivot = head.val;
+    let smallerHead = new ListNode(0);
+    let largerHead = new ListNode(0);
+    let smaller = smallerHead;
+    let larger = largerHead;
+    let current = head;
+  
+    while (current) {
+      if (current.val < pivot) {
+        smaller.next = current;
+        smaller = smaller.next;
+      } else {
+        larger.next = current;
+        larger = larger.next;
+      }
+      current = current.next;
+    }
+  
+    smaller.next = largerHead.next; // Combining smaller and larger lists
+    larger.next = null; // Setting the end of the larger list
+  
+    return smallerHead.next;
+  }
