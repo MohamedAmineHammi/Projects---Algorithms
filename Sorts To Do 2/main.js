@@ -52,3 +52,19 @@ class ListNode {
   
     return combineLists(left, right);
   }
+
+  //Array: Partition
+  function partition(arr, start = 0, end = arr.length) {
+    const pivot = arr[start];
+    let i = start;
+  
+    for (let j = start + 1; j < end; j++) {
+      if (arr[j] < pivot) {
+        i++;
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+    }
+  
+    [arr[start], arr[i]] = [arr[i], arr[start]];
+    return i;
+  }
