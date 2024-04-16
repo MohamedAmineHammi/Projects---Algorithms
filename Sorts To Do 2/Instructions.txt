@@ -1,0 +1,23 @@
+Sorts To Do 2
+
+
+SList: Merge Sort
+
+Use combineLists(list1,list2) to build the mergeSortList(list) algorithm for an unsorted singly linked list. What are run-time and space complexities of your solution?
+
+
+
+Array: Partition
+Partition unsorted array in-place. Use arr[0] as pivot val; return idx of pivot. Input [5,4,9,2,5,3] becomes [4,2,3,5,9,5], return 4.
+
+Second: for the pivot, use median of first, last, mid. 
+
+Third: partition a subset, given start and end.  Exclude end; default values are 0 and arr.length.
+
+
+
+SList: Partition
+Partition a singly linked list. Use the first element as the pivot; return the new list. List nodes contain .val and .next; do not reference other attributes. 
+
+For example, if you are given the following linked list: { 5=>1=>8=>4=>9=>2=>5=>3 }, you should return: { 1=>4=>2=>3=>5=>8=>9=>5 }.
+
