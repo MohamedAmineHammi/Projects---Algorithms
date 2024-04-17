@@ -1,0 +1,20 @@
+Sorts To Do 3
+
+
+Array: Quick Sort
+Create a function that uses yesterday’s partitionArray() to sort an array in-place. With yesterday’s code plus a very few new lines, you will implement QuickSort! What are the runtime and space complexities of your quickSortArr implementation?
+
+
+
+Array: Merge Sort
+Use the combineArrs() function above to construct mergeSortArr() for an unsorted array. What are the run-time and space complexities of your mergeSortArr solution?
+
+
+
+Array: Partition3
+Previous partition() implementations do not group duplicates of the pivot together. Create partition3() to keep pivot elements together; return an array containing indices for the first pivot and first greater. Change [5,1,8,4,9,2,5,3] to [1,4,2,3,5,5,8,9] and return [4,6]. Note: other 5 moved next to pivot.
+
+Second: pick a more optimal pivot.
+
+Third: partition only a portion, with start and end.
+
