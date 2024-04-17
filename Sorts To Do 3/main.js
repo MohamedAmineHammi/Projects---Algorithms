@@ -64,3 +64,13 @@ function partitionArray(arr, start, end) {
   const array = [5, 1, 8, 4, 9, 2, 5, 3];
   const sortedArray = mergeSortArr(array);
   console.log(sortedArray); // Output: [1, 2, 3, 4, 5, 5, 8, 9]
+
+  //Partition3
+  function partition3(arr, start, end) {
+    const pivot = arr[end];
+    let i = start;
+    let j = start;
+    
+    while (j <= end) {
+      if (arr[j] < pivot) {
+        [arr[i], arr[j]] = [arr[j],
