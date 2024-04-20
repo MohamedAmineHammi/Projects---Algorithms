@@ -1,0 +1,13 @@
+Sets To Do 2
+
+
+Intersect Sorted Arrays
+Efficiently combine two sorted arrays into an array containing the sorted multiset intersection of the two. Example: given [1,2,2,2,7] and [2,2,6,6,7], return [2,2,7].
+
+
+
+Intersect Sorted Arrays (dedupe)
+Efficiently combine two sorted multiset arrays into an array containing the sorted set intersection of the two. 
+
+Example: given [1,2,2,2,7] and [2,2,6,6,7], return [2,7].
+
