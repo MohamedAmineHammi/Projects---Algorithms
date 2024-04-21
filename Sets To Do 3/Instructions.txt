@@ -1,0 +1,50 @@
+Sets To Do 3
+As you proceed through this chapter, put yourself in a technical interview mindset with these concepts:
+
+Don’t panic.
+Think out loud.
+Clarifying questions.
+Error and corner cases.
+Example inputs
+Diagrams
+Admit when its suboptimal (but keep going) 
+“What are we optimizing for?”
+Throughout these challenges, remember the basic set operations and characteristics:
+
+Merger 
+Union 
+Intersection 
+Set / Multiset 
+Ordered / Unordered 
+Subset
+
+
+Union Sorted Arrays
+Efficiently combine two already-sorted arrays into a new sorted array containing the multiset union. 
+
+Example: given [1,2,2,2,7] and [2,2,6,6,7], return [1,2,2,2,6,6,7].
+
+
+
+Union Sorted Arrays (dedupe)
+Combine two sorted arrays into a new sorted array containing the union set (i.e. remove duplicates). 
+
+Example: given [1,2,2,2,7] and [2,6,6,7], return [1,2,6,7].
+
+
+
+Intersection Unsorted Arrays (in-place)
+Intersect two unsorted arrays, putting the unsorted multiset result ‘in-place’ into the first. Running ‘in-place’ also means you cannot create any data structure to hold values, such as an associative array. Given [2,7,2,1,2] and [6,7,2,7,6,2], you could change the first to [7,2,2] in any order.
+
+ 
+
+
+Intersection Unsorted Arrays
+Intersect two arrays to create an unsorted multiset. You can use an additional data structure type if it is helpful. However, don’t alter the arrays; return a new one. Given the arrays [6,7,2,7,6,2] and [2,7,2,1,2], return a new array containing [7,2,2] in any order. Is ‘non-in-place’ easier? Faster?
+
+
+
+Union Unsorted Arrays
+Return a new unsorted union multiset of two arrays; do not alter the originals. For [2,7,2,1,2] and [6,7,2,7,6,2], you could return [7,2,7,2,2,1,6,6]. How efficient can you be, for long arrays?
+
+
