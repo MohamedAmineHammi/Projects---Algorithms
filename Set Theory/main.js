@@ -65,3 +65,27 @@ function squareRoot(num) {
   
     return end;
   }
+
+  // Testing the functions
+const arr1 = [2, 7, 2, 1];
+const arr2 = [6, 7, 2, 6];
+
+unionInPlace(arr1, arr2);
+console.log(arr1); // Output: [2, 7, 2, 1, 6, 7, 2, 6]
+
+const unionResult = unionNoDuplicates(arr1, arr2);
+console.log(unionResult); // Output: [2, 7, 1, 6]
+
+const sortedArr1 = [1, 2, 3, 4, 5, 6, 7];
+const sortedArr2 = [2, 4, 6];
+
+console.log(subsetSorted(sortedArr1, sortedArr2)); // Output: true
+
+const unsortedArr1 = [2, 7, 2, 1];
+const unsortedArr2 = [6, 7, 2];
+
+console.log(subsetUnsorted(unsortedArr1, unsortedArr2)); // Output: true
+
+console.log(squareRoot(16)); // Output: 4
+console.log(squareRoot(25)); // Output: 5
+console.log(squareRoot(0.25)); // Output: 0.5
