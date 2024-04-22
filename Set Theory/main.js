@@ -8,3 +8,18 @@ function unionNoDuplicates(arr1, arr2) {
     const set = new Set([...arr1, ...arr2]);
     return Array.from(set);
   }
+
+  // Subset Sorted Arrays
+function subsetSorted(arr1, arr2) {
+    let i = 0;
+    let j = 0;
+  
+    while (i < arr1.length && j < arr2.length) {
+      if (arr1[i] === arr2[j]) {
+        j++;
+      }
+      i++;
+    }
+  
+    return j === arr2.length;
+  }
