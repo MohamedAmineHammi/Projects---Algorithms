@@ -36,3 +36,32 @@ function subsetUnsorted(arr1, arr2) {
   
     return true;
   }
+
+  // Square Root function
+function squareRoot(num) {
+    if (num < 0) {
+      throw new Error("Cannot calculate square root of a negative number");
+    }
+  
+    if (num === 0 || num === 1) {
+      return num;
+    }
+  
+    let start = 1;
+    let end = Math.floor(num / 2);
+  
+    while (start <= end) {
+      let mid = Math.floor((start + end) / 2);
+      let square = mid * mid;
+  
+      if (square === num) {
+        return mid;
+      } else if (square < num) {
+        start = mid + 1;
+      } else {
+        end = mid - 1;
+      }
+    }
+  
+    return end;
+  }
