@@ -1,0 +1,32 @@
+MinHeap
+Build the following methods in a new class called a MinHeap:
+
+
+
+Heap: Constructor
+Create a MinHeap constructor function.
+
+
+
+Heap: Size
+Return the number of values in the MinHeap.
+
+
+
+Heap: Contains
+Return whether a given val is within the heap.
+
+
+
+Heap: Is Empty
+Return whether the heap is empty.
+
+
+
+Heap: Top
+Return (not remove) the heap’s minimum value.
+
+
+
+Heap: Insert
+Add the given value to our heap.  
