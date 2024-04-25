@@ -54,3 +54,18 @@ class MinHeap {
       }
     }
   }
+
+  //Heap: Heapify Array
+  function heapifyArray(arr) {
+    const minHeap = new MinHeap();
+  
+    for (let i = 0; i < arr.length; i++) {
+      minHeap.heap.push(arr[i]);
+    }
+  
+    for (let i = Math.floor(arr.length / 2); i >= 0; i--) {
+      minHeap.siftDown(i);
+    }
+  
+    return minHeap.heap;
+  }
