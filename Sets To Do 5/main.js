@@ -69,3 +69,19 @@ class MinHeap {
   
     return minHeap.heap;
   }
+
+  //Heap Sort
+  function heapSort(arr) {
+    const minHeap = new MinHeap();
+    const sortedArr = [];
+  
+    for (let i = 0; i < arr.length; i++) {
+      minHeap.heap.push(arr[i]);
+    }
+  
+    while (minHeap.heap.length > 0) {
+      sortedArr.push(minHeap.extract());
+    }
+  
+    return sortedArr;
+  }
