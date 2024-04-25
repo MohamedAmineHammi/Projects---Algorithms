@@ -85,3 +85,54 @@ class MinHeap {
   
     return sortedArr;
   }
+
+  //Heap Sort (In-place)
+  function heapSortInPlace(arr) {
+    function siftDown(index, length) {
+      const element = arr[index];
+  
+      while (true) {
+        let leftChildIndex = 2 * index + 1;
+        let rightChildIndex = 2 * index + 2;
+        let swapIndex = null;
+  
+        if (leftChildIndex < length) {
+          if (arr[leftChildIndex] < element) {
+            swapIndex = leftChildIndex;
+          }
+        }
+  
+        if (rightChildIndex < length) {
+          if (
+            (swapIndex === null && arr[rightChildIndex] < element) ||
+            (swapIndex !== null && arr[rightChildIndex] < arr[leftChildIndex])
+          ) {
+            swapIndex = rightChildIndex;
+          }
+        }
+  
+        if (swapIndex === null) {
+          break;
+        }
+  
+        arr[index] = arr[swapIndex];
+        arr[swapIndex] = element;
+        index = swapIndex;
+      }
+    }
+  
+    const length = arr.length;
+  
+    for (let i = Math.floor(length / 2); i >= 0; i--) {
+      siftDown(i, length);
+    }
+  
+    for (let i = length - 1; i > 0; i--) {
+      const temp = arr[0];
+      arr[0] = arr[i];
+      arr[i] = temp;
+      siftDown(0, i);
+    }
+  
+    return arr;
+  }
