@@ -1,0 +1,75 @@
+Sets To Do 6
+
+
+Median of Data Stream
+With a separate function addValue(val), you will be given a continuous stream of data, one value at a time. At any moment, with a reasonable performance, you need to be able to return the median value. (What is reasonable performance?) Recall that the median of an even number of elements is the average of the two middle values.
+ 
+
+Before next chapter, here are a few other Queue/Stack problems to keep you thinking. Have fun!
+
+
+
+Queue from Two Stacks
+
+
+Using only Stack objects (not other data structures such as linked lists or arrays), implement a Queue.
+
+
+
+Priority Queue from Two Stacks
+Using only Stack objects (not other data structures such as lists or arrays), implement a Priority Queue.
+
+
+
+Comparing Stacks/Queues to Other Data Structures
+By now we have studied a few different data structures: array, SList, DList, BST, SLQueue, CirQueue, ArrStack, Deque, PriQueue. Each of these could be built as a set instead of a multiset (rejecting duplicate values instead of accepting them). We will not require you to build all the possible variants, but below we list them for completeness. Those that are bolded are ones you’ve already built previously; those underlined are highly recommended. In most cases, creating these will require only small adjustments to the code you’ve already written.
+
+ 
+
+Array (random-access multiset)
+
+Array without duplicates (random-access set)
+
+SList (forward-iterated insertable multiset)
+
+SList without duplicates (forward-iterated insertable set)
+
+ 
+
+DList (double-iterated insertable multiset)
+
+DList without duplicates (double-iterated insertable set)
+
+ 
+
+Binary Search Tree (ordered multiset) Binary Search Tree without duplicates (ordered set)
+
+SLQueue (sequential multiset)
+
+SLQueue without duplicates (sequential set)
+
+ 
+
+CirQueue (sequential multiset)
+
+CirQueue without duplicates (sequential set)
+
+ 
+
+SLStack (sequential multiset)
+
+SLStack without duplicates (sequential set) ArrStack (sequential multiset) ArrStack without duplicates (sequential set)
+
+ 
+
+Deque (double-sequential multiset)
+
+Deque without duplicates (double-sequential set)
+
+PriQueue (forward-ordered multiset)
+
+PriQueue without duplicates (forward-ordered set)
+
+ 
+
+On another chapter, we’ll build these: Associative Array (unordered multiset) Associative Array without duplicates (unordered set)
