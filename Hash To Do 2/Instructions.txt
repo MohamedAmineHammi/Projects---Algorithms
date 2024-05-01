@@ -1,0 +1,34 @@
+Hash To Do 2
+Today we will create these exact methods and add them to our HashMap class implementation:
+
+
+
+Hash: Remove
+Create HashMap method remove(key) that finds key, removes key/value pair, and returns the value (or null if key not found in our map).
+
+
+
+Hash: Load Factor
+We may eventually want to grow our array size. Create HashMap method loadFactor() to return an elements/buckets ratio to monitor this.
+
+
+
+Hash: Grow
+Write a method grow() to increase the internal array of buckets by 50% (20-element array would become 30 elements). Afterward, rehash all keys, since your mod factor has changed...
+
+
+
+Hash: Set Size
+Write a method setSize(newCap) to set the capacity of the internal bucket array to a specific length. As with grow(), after changing the array length, you must rehash all keys.
+
+
+
+Hash: Add
+Create addMap(HashMap) that accepts another HashMap of key-value pairs and adds each pair to the existing map. For duplicate keys, new values overwrite old ones.
+
+Second: incorporate a boolean input indicating whether new keys should overwrite existing.
+
+
+
+Hash: Select Keys
+Create method selectKeys(keyArray) to accepts an array of keys. Reject those keys in the existing map that are NOT in that array. If your map contains {"cool":"Pariece", "smart":"Pariece", "tall":"Kareem"}, then map.selectKeys(["cool","smart"]) should change map to {"cool":"Pariece", "smart":"Pariece"}.
