@@ -51,3 +51,26 @@ class HashSet {
       this.map.clear();
     }
   }
+
+  //HashMap to unordered_set:
+  class unordered_set {
+    constructor() {
+      this.set = new Set();
+    }
+  
+    has(key) {
+      return this.set.has(key);
+    }
+  
+    add(key) {
+      this.set.add(key);
+    }
+  
+    size() {
+      return this.set.size;
+    }
+  
+    clear() {
+      this.set.clear();
+    }
+  }
