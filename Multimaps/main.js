@@ -20,3 +20,34 @@ class HashSet {
       this.set.clear();
     }
   }
+
+  //HashMap to unordered_map
+  class unordered_map {
+    constructor() {
+      this.map = new Map();
+    }
+  
+    put(key, value) {
+      this.map.set(key, value);
+    }
+  
+    get(key) {
+      return this.map.get(key);
+    }
+  
+    has(key) {
+      return this.map.has(key);
+    }
+  
+    remove(key) {
+      this.map.delete(key);
+    }
+  
+    size() {
+      return this.map.size;
+    }
+  
+    clear() {
+      this.map.clear();
+    }
+  }
