@@ -74,3 +74,42 @@ class HashSet {
       this.set.clear();
     }
   }
+
+  //HashMap to unordered_multimap:
+  class unordered_multimap {
+    constructor() {
+      this.multimap = new Map();
+    }
+  
+    put(key, value) {
+      if (this.multimap.has(key)) {
+        this.multimap.get(key).push(value);
+      } else {
+        this.multimap.set(key, [value]);
+      }
+    }
+  
+    get(key) {
+      return this.multimap.get(key) || [];
+    }
+  
+    has(key) {
+      returnthis.multimap.has(key);
+    }
+  
+    remove(key) {
+      this.multimap.delete(key);
+    }
+  
+    size() {
+      let totalSize = 0;
+      for (const values of this.multimap.values()) {
+        totalSize += values.length;
+      }
+      return totalSize;
+    }
+  
+    clear() {
+      this.multimap.clear();
+    }
+  }
