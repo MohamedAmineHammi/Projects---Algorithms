@@ -1,0 +1,9 @@
+Making Maps into Sets or Multimaps
+We have previously mentioned both maps and sets. Sets are unordered collections of data, without any identifying label or index. You could think of a set as a map that has only keys. Today, we will change our HashMap data structure into a HashSet data structure, and even a HashMultiSet data structure.
+
+ 
+
+Below are HashMap’s attributes/functions. Referencing previous solutions, which class attributes/methods need changing to create an unordered_multimap? An unordered_set? Unordered_multiset?
+
+
+With this, refactor HashMap, resulting in related classes for unordered_map and unordered_set variants. For multiset and multimap, use a constructor allowMulti flag rather than a separate class.
