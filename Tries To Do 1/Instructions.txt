@@ -1,0 +1,29 @@
+Tries To Do 1
+After walking through a trie in both concept and code, hopefully, you see how tries might enable one to predict the word, given the first few letters! Implement the following challenges to create a TrieSet:
+
+
+
+Trie: Insert
+After building simple TrieSet and TrieNode constructors, create an add method to insert a string to the set. For our purposes, assume that input strings will be letters only – no numerals or punctuation. Also, you can convert inputs to lowercase before storing them. Return false if the word has already been stored (after all, it’s a TrieSet not a TrieMultiSet!), or true if insertion is successful. Tries are treelike (not a purely linear one like a linked list), so recursion at the node level is a reasonable choice.
+
+
+
+Trie: Contains
+Create a TrieSet method to check whether a given string is present within the set. Again, you can assume that all inputs are letters-only; you can also convert all strings to lowercase. Return true if the word is found, false if not.
+
+
+
+Trie: First
+Tries are reasonable substitutes for Hashes, yet they retain order! Build a method to return trie’s first value. First means lowest-alphabetically, not earliest-added. N.B.: "Todd" comes before "toddy".
+
+
+
+Trie: Last
+Return its last value. "Kelvin" comes after "kelp".
+
+
+
+Trie: Remove
+Construct a method in TrieSet class that removes a given string from our set. As earlier, safely assume that all input strings will contain only letters (not numerals or punctuation). Also, lowercase all strings before storing or checking for them. When removing trie values, remember that in some cases you need to remove a terminal TrieNode. You may potentially need to remove certain ancestor intermediate nodes. Make sure to return true on a successful removal, false if string not found.
+
+Second: Incorporate punctuation and case-sensitivity across the TrieSet class. Suggestion: the 95 typeable characters on a keyboard have consecutive charCode values, starting with [space].
