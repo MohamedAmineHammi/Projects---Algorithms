@@ -1,0 +1,20 @@
+Tries To Do 2
+Today, finish TrieSet. Auto-complete is used by search engines and mobile devices.
+
+
+
+Trie: Size
+Return the number of values added to the TrieSet. There are two valid ways to implement this method – can you come up with both? In which use cases would you prefer one over the other?
+
+
+
+Trie: Next
+Given a string that might not be in the trie, return the contained string that is immediately subsequent. Hashes don’t do well with this, but tries can! Return null if there is no subsequent string.
+
+
+
+Trie: AutoComplete
+Assume your trie is populated with a wide array of valid words. Given string (presumably what user typed so far), use your trie to rapidly return an array of words beginning with that string.
+
+Second: augment autoComplete(str) to accept maxResults, and return at most that many. 
+
