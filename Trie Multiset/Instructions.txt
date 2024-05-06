@@ -1,0 +1,33 @@
+Trie Multiset
+We mentioned it earlier, so let’s build TrieMultiSet. Remember, multiset is identical to set, except it tracks number of instances along with value. Implement the following that build a TrieMultiSet:
+
+
+
+Trie MultiSet: Insert
+For this exercise, Insert increments count, adds nodes as needed and always succeeds.
+
+
+
+Trie MultiSet: Remove
+Remove should decrement count and eliminate nodes, returning previous count (0 if not found).
+
+
+
+Trie MultiSet: Size
+Size should return total (multi) count.
+
+
+
+Trie MultiSet: Contains
+Contains should return count (0 if not found).
+
+ 
+
+NOTE: First / Last / Next are unchanged when moving from Set to MultiSet.
+
+
+
+
+
+Trie MultiSet: Auto Complete
+Given an entire dictionary and a short initial string fragment, autocomplete might return a huge number of results. Let’s use the count aspect of each TrieMultiNode to denote the frequency of that word, and use this to prioritize the return results from autoComplete, so that most frequent words are listed first. In addition to the string fragment, accept maxResults, and return at most that many results.
