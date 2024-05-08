@@ -1,0 +1,37 @@
+Trie Map
+We can expand a TrieSet to a trieMap by associating an additional value to each stored string.
+
+
+
+Trie Map: Insert
+Insert should accept a key and a value and should return the preexisting value (if the key already existed) or null if the key is new. 
+
+
+
+Trie Map: Contains
+Contains should return the value for the given key (null if the key is not found).
+
+
+
+Trie Map: Remove
+Remove deletes the given key (and value),  returning true if the key was found, else false.
+
+
+
+Trie Map: Size
+Size is unchanged from TrieSet.
+
+
+
+Trie Map: First
+First returns an object containing the key-value pair for the alphabetically-lowest key.
+
+
+
+Trie Map: Last
+Conversely, Last returns the final key-value.
+
+
+
+Trie Map: Next
+Given a key that may not be present, next(key) returns the subsequent key-value.
