@@ -64,3 +64,20 @@ function distanceBetweenPoints2D(x1, y1, x2, y2) {
       height,
     };
   }
+
+  //Checking the Connectedness Count
+  function hasIntersection(rectangles) {
+    const count = rectangles.length;
+    const intersected = new Array(count).fill(false);
+  
+    for (let i = 0; i < count; i++) {
+      for (let j = i + 1; j < count; j++) {
+        if (checkRectangleOverlap(rectangles[i], rectangles[j])) {
+          intersected[i] = true;
+          intersected[j] = true;
+        }
+      }
+    }
+  
+    return intersected;
+  }
