@@ -27,3 +27,30 @@ function distanceBetweenPoints2D(x1, y1, x2, y2) {
   
     return true; // Rectangles overlap
   }
+
+  //Sketching the Circle
+  function drawCircle(screenWidth, screenHeight, centerX, centerY, radius) {
+    let x = radius;
+    let y = 0;
+    let radiusError = 1 - x;
+  
+    while (x >= y) {
+      setPixel(centerX + x, centerY + y);
+      setPixel(centerX + y, centerY + x);
+      setPixel(centerX - y, centerY + x);
+      setPixel(centerX - x, centerY + y);
+      setPixel(centerX - x, centerY - y);
+      setPixel(centerX - y, centerY - x);
+      setPixel(centerX + y, centerY - x);
+      setPixel(centerX + x, centerY - y);
+  
+      y++;
+  
+      if (radiusError < 0) {
+        radiusError += 2 * y + 1;
+      } else {
+        x--;
+        radiusError += 2 * (y - x + 1);
+      }
+    }
+  }
