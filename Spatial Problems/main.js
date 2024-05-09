@@ -157,3 +157,26 @@ function distanceBetweenPoints2D(x1, y1, x2, y2) {
   
     return skyline;
   }
+
+  //Calling the Big One
+  function largestRectangleSize(skyline) {
+    const stack = [];
+    let maxSize = 0;
+    let i = 0;
+  
+    while (i <= skyline.length) {
+      const height = i === skyline.length ? 0 : skyline[i][1];
+  
+      if (stack.length === 0 || height >= skyline[stack[stack.length - 1]][1]) {
+        stack.push(i);
+        i++;
+      } else {
+        const topIndex = stack.pop();
+        const width = stack.length === 0 ? i : i - stack[stack.length - 1] - 1;
+        const size = skyline[topIndex][1] * width;
+        maxSize = Math.max(maxSize, size);
+      }
+    }
+  
+    return maxSize;
+  }
