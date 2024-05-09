@@ -54,3 +54,13 @@ function distanceBetweenPoints2D(x1, y1, x2, y2) {
       }
     }
   }
+
+  //Describing the Rectangle (or, 'Get Rect')
+  function createRectangle(x, y, width, height) {
+    return {
+      x,
+      y,
+      width,
+      height,
+    };
+  }
