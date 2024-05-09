@@ -81,3 +81,40 @@ function distanceBetweenPoints2D(x1, y1, x2, y2) {
   
     return intersected;
   }
+
+  //the graph is fully connected
+  function isFullyConnected(rectangles) {
+    const count = rectangles.length;
+    const adjacencyMatrix = new Array(count).fill(0).map(() => new Array(count).fill(false));
+  
+    for (let i = 0; i < count; i++) {
+      for (let j = i + 1; j < count; j++) {
+        if (checkRectangleOverlap(rectangles[i], rectangles[j])) {
+          adjacencyMatrix[i][j] = true;
+          adjacencyMatrix[j][i] = true;
+        }
+      }
+    }
+  
+    const visited = new Array(count).fill(false);
+    let connectedComponents = 0;
+  
+    function dfs(node) {
+      visited[node] = true;
+  
+      for (let i = 0; i < count; i++) {
+        if (adjacencyMatrix[node][i] && !visited[i]) {
+          dfs(i);
+        }
+      }
+    }
+  
+    for (let i = 0; i < count; i++) {
+      if (!visited[i]) {
+        dfs(i);
+        connectedComponents++;
+      }
+    }
+  
+    return connectedComponents === 1;
+  }
