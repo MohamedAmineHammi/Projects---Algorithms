@@ -118,3 +118,42 @@ function distanceBetweenPoints2D(x1, y1, x2, y2) {
   
     return connectedComponents === 1;
   }
+
+  //Admiring the Skyline
+  function calculateSkyline(buildings) {
+    const skyline = [];
+    const events = [];
+  
+    for (const building of buildings) {
+      const [start, height, width] = building;
+      events.push([start, height, 'start']);
+      events.push([start + width, height, 'end']);
+    }
+  
+    events.sort((a, b) => a[0] - b[0]);
+  
+    const activeHeights = new Map();
+    let prevHeight = 0;
+  
+    for (const [x, height, eventType] of events) {
+      if (eventType === 'start') {
+        activeHeights.set(height, (activeHeights.get(height) || 0) + 1);
+      } else {
+        const count = activeHeights.get(height);
+        if (count === 1) {
+          activeHeights.delete(height);
+        } else {
+          activeHeights.set(height, count - 1);
+        }
+      }
+  
+      const currentHeight = Math.max(...activeHeights.keys(), 0);
+  
+      if (currentHeight !== prevHeight) {
+        skyline.push([x, currentHeight]);
+        prevHeight = currentHeight;
+      }
+    }
+  
+    return skyline;
+  }
