@@ -1,0 +1,47 @@
+Spatial Problems
+Many challenges in this section are drawn from technical interviews at various companies. Note that a significant number of them don’t actually require coding. Stay sharp!
+
+ 
+
+These problems test mathematical thinking without overtly requiring more advanced algorithms or data structures. Remember your basic geometry for surface area, circumference, and symmetry!
+
+
+
+Minding the Gap
+Given two points on a two-dimensional plane, return the distance between them.
+
+Second: what if the points are in 3-D space?
+
+
+
+Detecting the Overlap
+Write a function to determine whether two rectangles overlap. Design an elegant function interface.
+
+
+
+Sketching the Circle
+Draw a circle on the screen, given screen dimensions, circle’s center and radius, all in pixels. You can call setPixel(x,y) to draw a single point. 
+
+Second: Once you’ve calculated the first 1/8 of the circle, can you quickly draw the rest?
+
+
+
+Describing the Rectangle (or, ‘Get Rect’)
+How would you best represent a two-dimensional rectangle, if you were passing one as a parameter?
+
+
+
+Checking the Connectedness Count
+You are given an array containing a number of rectangles. Determine whether each rect intersects with at least one other.
+
+Second: Determine whether all rectangles interconnect into one interconnected section. If rect A connects to rects B and C, plus rects B and D connect, then ABCD are interconnected. If AB are separate from CD, then ABCD do not interconnect: they create 2 (not 1) sections.
+
+
+
+Admiring the Skyline
+You are given array of building objects; your job is to calculate the skyline. Buildings consist of [start,height,width]; a skyline is an array of [start,height] elements. Given the array [[2,3,4],[5,1,7]], return [[0,0],[2,3],[6,1],[12,0]].
+
+
+
+Calling the Big One
+You are given an array, containing non-negative integers that correspond to a height (on the Y-axis) for that index (on the X-axis). In essence, this array of integers represents the same type of skyline shape that you worked with in the previous challenge. Return the size of the largest rectangle that can be drawn within that shape. Note that the lines outlining the shape of the input are all vertical and horizontal; there are no diagonals.
