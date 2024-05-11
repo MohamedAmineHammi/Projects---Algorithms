@@ -1,0 +1,43 @@
+Logic (Thought) Problems
+Logic, or thought, puzzles don’t fit cleanly into previous chapters, because they are not coding problems. However, they have been asked in technical interviews to assess reasoning ability, so we pose them to you here. With each, just as with estimation challenges, consider the information and assets you have and make the best use of them. Many companies are moving away from brainteaser puzzles, so don’t worry if these questions are ‘not your thing’. Just have fun with them!
+
+ 
+
+A common class of thought problems involves identical objects whose weights vary slightly. Unless stated, assume “scales of justice” that compare two quantities (rather than a scale with a readout).
+
+
+
+Finding the Fraud
+Given 64 apparently identical coins, one of which is heavy, how many weighings do you need (in the worst-case), to determine the bad coin? How low can you get the average number of weighings? 
+
+Second: what if it is possible that there is NO bad coin? Does that change your calculus?
+
+
+
+Revealing the Wrong
+Given twelve apparently identical coins, one of which is either light or heavy, how many weighings do you in order to identify the bad coin – as well as whether it is light or heavy? 
+
+Second: what if it is possible that there is NO bad coin? Does that change your calculus? 
+
+Third: extrapolating, what is the maximum number of coins you can handle with five weighings?
+
+
+
+Querying the Quarters
+You have a digital scale that gives very precise readouts; it can handle up to 90 grams. Six vendors have each given you large stacks of apparently identical quarters. One vendor is dishonest: evidently, his entire coin stack is counterfeit. Each counterfeit quarter weighs 6 grams instead of the usual 5.67g. If you know that one pile consists of heavy quarters, determine which one, in only a single weighing.
+
+
+
+Lighting the Way
+Three light switches are located outside a room, where we cannot see which lamps they control. Andy figured a way to set the switches to determine the mapping after a single trip into the room. Can you?
+
+
+
+Making the Train
+A family of four must cross a bridge to reach a midnight train on the other side. The rickety bridge only holds two; they can only cross with their one flashlight. The youngest can cross in 1 minute; the next can cross in 2; the parent in 6; the grandparent needs 12. Can they make their train in 20 minutes?
+
+
+
+Escaping the Hunt
+Fiona Fox wants Dunn the Duck for lunch. Now Dunn is in the center of a circular pond. Fiona cannot enter the water; she must run around it. To fly away and escape, Dunn must reach the edge before Fiona reaches him. Fiona runs four times as fast as Dunn swims. Is Dunn done, or can he escape?
+
