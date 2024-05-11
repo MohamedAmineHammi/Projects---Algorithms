@@ -1,0 +1,37 @@
+Finding the Fraud:
+To determine the bad coin among 64 apparently identical coins, you can use a binary search approach. Divide the coins into two equal groups of 32 each. Weigh these two groups against each other. If one group is heavier, it contains the bad coin. If they balance, the bad coin is in the remaining 32. Repeat this process, dividing the remaining group in half each time, until you find the bad coin.
+In the worst-case scenario, the bad coin is the last one to be weighed, requiring a total of 6 weighings.
+
+The average number of weighings can be calculated using the formula: log2(n), where n is the total number of coins. In this case, the average number of weighings is log2(64) = 6.
+
+If there is a possibility that there is no bad coin among the 64, then you would need to perform 7 weighings to confirm this. You would follow the same binary search approach but include an additional weighing at the end to ensure there is no bad coin.
+
+Revealing the Wrong:
+To identify the bad coin among 12 apparently identical coins and determine whether it is light or heavy, you can use a similar binary search approach. Divide the coins into three groups of 4 each. Weigh any two of the groups against each other. If they balance, the bad coin is in the remaining group of 4. If they don't balance, you can identify the bad group. Take the bad group and divide it into two groups of 2 coins each. Weigh these two groups against each other. If they balance, the bad coin is the remaining one. If they don't balance, you can identify the bad coin by its weight.
+In the worst-case scenario, it would require 3 weighings to identify the bad coin and determine its weight.
+
+If there is a possibility that there is no bad coin among the 12, then you would need to perform 4 weighings to confirm this. You would follow the same binary search approach but include an additional weighing at the end to ensure there is no bad coin.
+
+Extrapolating the Maximum:
+With five weighings, you can handle a maximum of 32 coins. This can be achieved by using a binary search approach similar to the previous problems. Each weighing divides the remaining group of coins in half, allowing you to handle larger groups with each weighing.
+Querying the Quarters:
+To determine which stack of quarters consists of heavy quarters in a single weighing, you can assign each stack a number from 1 to 6. Take one quarter from stack 1, two quarters from stack 2, three quarters from stack 3, and so on. Place all these selected quarters on the scale. If the total weight is correct (90 grams), then the dishonest vendor is stack 1. If the total weight is higher than 90 grams, the dishonest vendor is one of the stacks based on the number of extra grams. For example, if the total weight is 92 grams, the dishonest vendor is stack 2. If the total weight is lower than 90 grams, the dishonest vendor is one of the stacks based on the number of grams missing.
+Lighting the Way:
+To determine which switches control the lamps after a single trip into the room, follow these steps:
+Turn on the first switch and wait for a few minutes.
+Turn off the first switch and turn on the second switch.
+Enter the room.
+Now observe the state of the lamps:
+
+If a lamp is on, it is controlled by the second switch.
+If a lamp is off and warm to the touch, it is controlled by the first switch.
+If a lamp is off and cool, it is controlled by the third switch.
+Making the Train:
+The family can make their train in 20 minutes by following these steps:
+The parent and the grandparent (6 + 12 = 18 minutes) cross the bridge together, taking 12 minutes.
+The parent takes the flashlight and goes back alone, taking 6 minutes.
+The youngest child (1 minute) and the next child (2 minutes) cross the bridge together, taking 2 minutes.
+The total time taken is 12 + 6 + 2 = 20 minutes.
+
+Escaping the Hunt:
+Dunn can escape from Fiona. Since Fiona runs four times as fast as Dunn swims, it means Fiona's speed is four times greater. Dunn can reach the edge of the pond in the same time it takes Fiona to run around the entire pond. Therefore, Dunn can escape.
