@@ -1,0 +1,35 @@
+Spatial To Do 1
+
+
+Surviving the Train
+While hiking, Minh and Crazy Brian find a narrow train tunnel running north-south. At Crazy Brian’s urging, they go in. At exactly 2/3 through this tunnel (closer to the north end than the south end), they hear a train nearing! Crazy Brian runs toward the train, just exiting the tunnel as it enters. Minh runs the other way, also barely escaping the tunnel as the train passes. Both Minh and Crazy Brian ran 10mph. How fast was the train? Also, did the train enter at the north end or the south end of this tunnel?
+
+
+
+Racing the Balls
+Two identical-length tracks are each wide enough for a rolling marble. Starting at the same moment, marbles accelerate downward, diverge (one upward, one downward), reconverge at a point lower than where they diverged, and continue onward, both finishing. Do the marbles finish at the same time?
+
+
+
+Crossing the River
+Traveling with a fox, a hen and a sack of corn, you reach a river with a rowboat. The boat can only fit you and one other. If left alone, then eats corn; likewise, fox eats hen. Can you get everything across? How?
+
+
+
+Burning the String
+You have two pieces of string, and evidently, both will take precisely 60.0 seconds to burn – although they burn at unpredictable rates during that time. Can you use these to measure 45.0 seconds exactly?
+
+
+
+Outfoxing the Fox
+Fiona Fox is hungry again. She has trapped Reggie Rabbit inside a circular pen. Reggie can run exactly as fast as Fiona. Can Fiona catch Reggie? What is Reggie’s best strategy to survive?
+
+
+
+Swapping the Lockers
+You are at a high school with lockers numbered 1-100. First, open them all. Then, for all locker numbers divisible by two, toggle the locker door (if open, close it; if closed, open it). Then, toggle all that are divisible by three. Then, toggle those divisible by four…. Repeat this process for successive integers until, finally, you toggle the one and only locker (#100) that is divisible by one hundred. How many lockers are open at this point? Which ones? Why?
+
+
+
+Combining the Numbers
+You are given five numbers. Using any combination of the four common arithmetic operators (+ - * /), but keeping these numbers in the order they were given, combine the first four to make a total of the fifth. For example, given (3, 10, 2, 40, 100), one solution is (3*10*2)+40, which equals 100.
