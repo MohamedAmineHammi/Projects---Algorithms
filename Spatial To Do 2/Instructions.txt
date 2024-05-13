@@ -1,0 +1,35 @@
+Spatial To Do 2
+Can you accurately answer the next 3 questions in a total of 15 seconds or less?
+
+
+
+Pricing the Movie
+A movie plus popcorn costs $11. The movie costs $10 more than popcorn. How much does popcorn cost?
+
+
+
+Building the Widgets
+If 5 machines build 5 widgets in 5 hours, how long will 100 machines take to build 100 widgets?
+
+
+
+Padding the Pond
+A large pond has a patch of lily pads in the center. Each day the patch doubles in size. The entire pond is covered in 48 days. How many days does it take to cover half the pond?
+
+ 
+
+NOTE:  When using these exact questions, the faster you answer, the less likely you will answer all correctly. Changing the wording to make the questions slightly more confusing actually increased the number of people that got all three correct, by slightly slowing readers down. So be careful not to work too fast!
+
+
+The following is a system design problem, not a logic puzzle. However, it still requires logical analysis. As with most design problems, there’s no lack of input information – but which are actually important?
+
+Elevating the Passengers
+Design the operating software for an elevator system that serves a 20-story office building. Each of the four elevators contains buttons for floors 1-20, for passengers to press when they enter the elevator, indicating where they want to travel. The north elevator receives more sunlight than the other elevators. Near the elevator doors on each floor, there are Up and Down buttons to call an elevator going that direction. The lobby at floor 1 has a marble floor. Elevators can handle 1000 kilograms of weight, and 100 persons work on each floor. The busiest times for elevator travel are between 7:30 am and 8:15 am, and between 4:30 pm and 6:30 pm. Office workers are, for the most part, patient – except for old man Surrey who always complains about ‘slow creaky elevators’. The building owner, Bo, has a Spaniel named ‘Spike’, and this dog weighs exactly 10.0 pounds. The doors to the elevators remain open for 10 seconds at a time, and the elevator cars take an average of 1 second/floor to ascend and descend. Spike likes the south elevator, which has transparent glass walls. Bo thinks Spike is just about perfect.
+
+ 
+
+What data structures might you use to manage this elevator system? More importantly, can you produce a state diagram representing the logic that governs the elevators?
+
+ 
+
+NOTE: Spike may or may not actually be just about perfect.
