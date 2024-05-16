@@ -1,0 +1,32 @@
+Closest Three-Sum 2
+We hope you share our opinion that closestThreeSum1 is … unfortunate. It has a number of significant problems. First, it does not actually work because of the absence of two Math.abs() calls. Can you identify where these should be? Also, it is susceptible to crash if sent incorrect inputs. We must fix those before considering any optimization. At that point, what are our performance goals?
+ 
+
+Let’s say our goals are to return a correct answer for 2000-element arrays in 10 milliseconds (ms), and to successfully scale to handle 1,000,000-element arrays in less than an hour. The previous code, after being fixed, fails on both accounts. It returns the answer for a 300-element array in 386ms, and it crashes Chrome when trying to handle a 515-element array (solves 514-element array in 1963ms). We’re a long way from those goals! What are the major problems leading to this abysmal outcome? At a glance, they might be: memory consumption and (two different sets of) nested loops. Which should we tackle first?
+
+ 
+
+Memory consumption is often our worst culprit. To quantify its impact, let’s eliminate the second nested set of loops altogether. We could continue to create a large three-dimensional array, but instead of calculating the answer after-the-fact, we could keep track of the best-so-far as we go (there would be little need to create the large array at that point, but stay with me). This only improves performance by about 5%. If we eliminate the array, performance is much better: 65ms for 300 elements, and 300ms for 514 elements! Plus, we scale further: for 2000 elements, we require 17828ms. Code is below:
+
+function closestThreeSum2(arr, target) {
+    if (arr === undefined || target === undefined) { return; }
+    if (arr.length === undefined || arr.length < 3) { return; }
+    var bestSum = Number.MAX_VALUE;
+    var bestNums = [];
+    for (var idx1 = 0; idx1 < arr.length; idx1++) {
+        for (var idx2 = 0; idx2 < arr.length; idx2++) {
+            for (var idx3 = 0; idx3 < arr.length; idx3++) {
+                var sum = Math.abs(arr[idx1] + arr[idx2] + arr[idx3] - target);
+                if (sum < bestSum) {
+                    bestSum = sum;
+                    bestNums[0] = arr[idx1];
+                    bestNums[1] = arr[idx2];
+                    bestNums[2] = arr[idx3];
+                }
+            }
+        }
+    }
+    return bestNums;
+}
+copy
+If our goal is 10ms (not 17000) for a 2000-element array, then we still have work to do!
