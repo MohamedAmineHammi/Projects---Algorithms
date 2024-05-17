@@ -1,0 +1,31 @@
+Closest Three-Sum 3
+Actually, the solution before is still incorrect. It will put a single array element into the solution multiple times. We need to adjust our FOR loops so that this does not occur. Related, the idx1 outer loop does not need to extend out to arr.length since idx2 and idx3 will always be after it. Those could be:
+for (var idx1 = 0; idx1 < arr.length - 2; idx1++) {
+    for (var idx2 = idx1 + 1; idx2 < arr.length - 1; idx2++) {
+        for (var idx3 = idx2 + 1; idx3 < arr.length; idx3++) {
+copy
+Also, must we continue if we find a combination that matches our target exactly? No, in that case, let’s fast-finish. This would result in our having the following code. What is your assessment now?
+
+function closestThreeSum4(arr, target) {
+    if (arr === undefined || target === undefined) { return; }
+    if (arr.length === undefined || arr.length < 3) { return; }
+    var bestSum = Number.MAX_VALUE;
+    var bestNums = [];
+    for (var idx1 = 0; idx1 < arr.length - 2; idx1++) {
+        for (var idx2 = idx1 + 1; idx2 < arr.length - 1; idx2++) {
+            for (var idx3 = idx2 + 1; idx3 < arr.length; idx3++) {
+                var sum = Math.abs(arr[idx1] + arr[idx2] + arr[idx3] - target);
+                if (sum < bestSum) {
+                    bestNums[0] = arr[idx1];
+                    bestNums[1] = arr[idx2];
+                    bestNums[2] = arr[idx3];
+                    if (sum === 0) { return bestNums; }
+                    bestSum = sum;
+                }
+            }
+        }
+    }
+    return bestNums;
+}
+copy
+The FOR loop adjustment improves our 2000-element performance to 2.989 seconds (from 17). The fast-return is harder to quantify, but for integer arrays, it usually returns in much less than a millisecond (0.008ms in some tests). If the values are not integers, however, our performance is unchanged unless we change (sum === 0) to something like (sum < 0.0001). Let’s say we really do want to find the very best match, so must leave this as-is. We must focus on bringing the 2.989-seconds number down. What about a totally different approach? Think about this before going on to the next page.
