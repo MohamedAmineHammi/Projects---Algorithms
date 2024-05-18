@@ -1,0 +1,39 @@
+Closest Three-Sum 4
+If we are already operating at O(n^3), then there is little harm in sorting the input array (unless this is forbidden by the interviewer). If the array is sorted, does that help?
+
+ 
+
+If the array is sorted, the sum will increase as we progress through each loop. For our innermost loop, once sum exceeds target, we won’t get any closer, so we should break out of that particular inner loop. What performance gain would you expect from this optimization? Are there drawbacks? The code is below:
+
+function closestThreeSum5s(arr, target) {
+    if (arr === undefined || target === undefined) { return; }
+    if (arr.length === undefined || arr.length < 3) { return; }
+    var bestSum = Number.MAX_VALUE;
+    var bestNums = [];
+    selectionSort(arr);
+    for (var idx1 = 0; idx1 < arr.length - 2; idx1++) {
+        for (var idx2 = idx1 + 1; idx2 < arr.length - 1; idx2++) {
+            for (var idx3 = idx2 + 1; idx3 < arr.length; idx3++) {
+                var sum = arr[idx1] + arr[idx2] + arr[idx3] - target;
+                var absSum = Math.abs(sum);
+                if (absSum < bestSum) {
+                    bestNums[0] = arr[idx1];
+                    bestNums[1] = arr[idx2];
+                    bestNums[2] = arr[idx3];
+                    if (absSum === 0) { return bestNums; }
+                    bestSum = absSum;
+                }
+                else {
+                    if (sum > 0) { break; }
+                }
+            }
+        }
+    }
+    return bestNums;
+}
+
+What would you change about the above? At this speed, it would take four years to handle a million-element array – not exactly the speed we want. What about performance on our 2000-element goal?
+
+ 
+
+Good news and bad news. For floating-point values, we get almost 2x speedup! However, for 2000-integer arrays, performance moves from <0.01ms to 6ms – a 600x slowdown! Not good, right?
