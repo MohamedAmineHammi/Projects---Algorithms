@@ -1,0 +1,37 @@
+Closest Three-Sum 5
+Don’t be distracted by attempts to lure your focus away from your performance goals. This is still good, assuming our goals remain 1) correctly handle 2000-element arrays in 10ms, and 2) correctly handle 1-million-element arrays in 60 minutes. Nonetheless, it is good to understand the cause of the slowdown. Even if the first three elements yield a fast-finish result, we have a guaranteed cost of sorting the array (6 ms to selectionSort 2000 elements). Substituting quickSort for selectionSort eliminates about 2 ms, giving us 1650 ms for 2000 floats, or 4 ms for 2000 integers. Not bad, but not there yet.
+ 
+
+What else would take advantage of the fact that the array is sorted? Techniques like binary-search can find a value much faster than linear iteration. Could we do that with idx3? The code below uses binary search to narrow in on an ideal idx3 value, moving on when low and high bookends come together.
+
+function closestThreeSum6q(arr, target) {
+    if (arr === undefined || target === undefined) { return; }
+    if (arr.length === undefined || arr.length < 3) { return; }
+    var bestSum = Number.MAX_VALUE;
+    var bestNums = [];
+    quickSort(arr);
+    for (var idx1 = 0; idx1 < arr.length - 2; idx1++) {
+        for (var idx2 = idx1 + 1; idx2 < arr.length - 1; idx2++) {
+            var high = arr.length - 1;
+            var low = idx2 + 1;
+            while (high >= low) {
+                var idx3 = Math.floor((high + low) / 2);
+                var candidateSum = arr[idx1] + arr[idx2] + arr[idx3] - target;
+                var absDiff = Math.abs(candidateSum);
+                if (absDiff < bestSum) {
+                    bestNums[0] = arr[idx1];
+                    bestNums[1] = arr[idx2];
+                    bestNums[2] = arr[idx3];
+                    if (absDiff === 0) { return bestNums; }
+                    bestSum = absDiff;
+                }
+                if (candidateSum > 0) { high = idx3 - 1; }
+                else { low = idx3 + 1; }
+            }
+        }
+    }
+    return bestNums;
+}
+
+Theoretically, this takes us from O(n^3) to O(n^2logn), which is a 100x win if we have 2000 elements….
+
