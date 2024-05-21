@@ -1,0 +1,35 @@
+Closest Three-Sum 6
+This makes a big difference! For 2000 floats, we now run in 71ms, which starts to approach our 10ms goal. Integers run in 0.225ms, which is fantastic. Unfortunately, extrapolating to 1 million elements, we  still require more than 10 hours to run: we need more perf wins. How about the Math.floor call? Aren’t those expensive? We get a 10% speedup by instead using >>> (closestThreeSum7q, not shown), but that won’t give us an order-of-magnitude improvement. We need a better way to scale up.
+
+ 
+
+Rather than code tuning, our answer lies in another algorithmic breakthrough. Have idx2 and idx3 count toward each other as follows: start idx2 at idx1+1; start idx3 at arr.length-1. If the threeway sum is too small, move idx2 up by one, otherwise move idx3 down by one. For each idx2, there are very few idx3 values worth considering. This reduces the idx2|idx3 inner loops from O(NlogN) to O(2N) – a big win, and perhaps enough to meet our goals! The code would look like this:
+
+function closestThreeSum8q(arr, target) {
+    if (arr === undefined || target === undefined) { return; }
+    if (arr.length === undefined || arr.length < 3) { return; }
+    var bestSum = Number.MAX_VALUE;
+    var bestNums = [];
+    quickSort(arr);
+    for (var idx1 = 0; idx1 < arr.length - 2; idx1++) {
+        var idx2 = idx1 + 1;
+        var idx3 = arr.length - 1;
+        while (idx2 < idx3) {
+            var candidateSum = arr[idx1] + arr[idx2] + arr[idx3] - target;
+            var absDiff = Math.abs(candidateSum);
+            if (absDiff < bestSum) {
+                bestNums[0] = arr[idx1];
+                bestNums[1] = arr[idx2];
+                bestNums[2] = arr[idx3];
+                if (absDiff === 0) { return bestNums; }
+                bestSum = absDiff;
+            }
+            if (candidateSum > 0) { idx2++; } else { idx3--; }
+        }
+    }
+    return bestNums;
+}
+
+
+What do you predict? Could a simple change like this really make a noticeable change?
+
