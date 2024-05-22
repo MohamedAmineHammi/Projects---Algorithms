@@ -1,0 +1,6 @@
+Closest Three-Sum 7
+Success! For a 2000-element array of floats, closestThreeSum8q handles them in 5.46ms (down from 62). For integers, our performance is up to 4.3ms, but this is still within range. This actually suggests the performance of straight-up O(n2), which suggests that we would handle a million-element array in 1350 seconds or only 22 minutes. Could this be the case? Yes – in less than 24 minutes, our function returns. From closestThreeSum1 to this one, we speed the 500-element case by 5000x. For closestThreeSum2, a million-element array would take 70 years. The 8q function makes it 5.46ms.
+
+ 
+
+Bottom line: Algorithm choice is truly crucial when optimizing software. This is particularly the case in your most central, highly-frequented inner-loop code locations. Here, a tiny win can be magnified into significant savings. The Big-O decision does and should overshadow other decisions here. Once you have achieved the right order of magnitude to meet your goals, identifying additional ways to cut your runtime in half can give huge gains even if your Big-O doesn’t change. People will still notice.
