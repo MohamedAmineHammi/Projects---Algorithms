@@ -1,0 +1,21 @@
+To Do 1
+The next challenge explores two axes simultaneously – improving performance and adding features. Enhancements range from algorithm to data structure to plain old logic. We hope you enjoy the ride.
+
+
+
+N Queens (Series)
+Recall this challenge from earlier material on recursion. Chessboards are square, with 8 rows of 8 squares each. Queens are one type of chess piece, and in a single move they can travel any number of squares in either of the horizontal directions (along a row), or either of the vertical directions (along with a file or column), or either of the diagonal directions (staying on the same color). A piece is considered under threat from a queen if it is situated in a square where that queen can directly move.
+
+
+
+Is Chess Move Safe
+isChessMoveSafe(intendedMove,queenArr) returns true if square is threatened, else false. Accepts location object to check, and current locations of an array of opposing queens.
+
+
+
+N Queens
+Create nQueens(numQns,xSize,ySize) using previous work such as isChessMoveSafe, returning all arrangements of N unthreatened queens on X-by-Y rectangular board. eightQueens() == nQueens(8,8,8).
+
+ 
+
+As with earlier challenges, it behooves you to solve it on your own before moving on to the next challenges. Refresh your memory by revisiting the Recursion material, if needed.
