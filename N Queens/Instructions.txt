@@ -1,0 +1,38 @@
+N Queens (Series)
+Again, it benefits you most if you have already created a solution before reading on. If not, do so now. Did the previous performance journey change how you viewed this one? For this challenge, we start with a most ridiculous implementation. Do your best to spot the fix or optimization before we get to it!
+
+function isChessMoveSafe1(intendedMove, queenArr) {
+    var xCoord = 0, yCoord = 1;
+    var safe = true;
+    for (var qNum = 0; qNum < queenArr.length; qNum++) {
+        for (var row = 0; row < 8; row++) {
+            if ((intendedMove[xCoord] == row) && (intendedMove[yCoord] == queenArr[qNum][yCoord])) { safe=false;}
+        }
+        for (var col = 0; col < 8; col++) {
+            if ((intendedMove[xCoord] == queenArr[qNum][xCoord]) && (intendedMove[yCoord] == col)) { safe = false; }
+        }    
+        for (var lDiag = -7; lDiag <= 7; lDiag++) {
+            if (( intendedMove[xCoord] - intendedMove[yCoord] == lDiag) && (queenArr[qNum][xCoord] - queenArr[qNum][yCoord] == lDiag))
+            { safe = false; }
+        }
+        for (var rDiag = 0; rDiag <= 14; rDiag++) {
+            if (( intendedMove[xCoord] + intendedMove[yCoord] == rDiag)&& (queenArr[qNum][xCoord] + queenArr[qNum][yCoord] == rDiag))
+            { safe = false; }
+        }
+    }
+    return safe;
+}
+function queens1(nQueensLeft,results,queensSoFar) {
+    if (results === undefined) { results = []; }
+    if (queensSoFar === undefined) { queensSoFar = []; }
+    if (nQueensLeft) {
+    for (var row = 0; row < 8; row++) {
+        for (var col = 0; col < 8; col++) {
+            if (isChessMoveSafe1([row, col], queensSoFar)) {
+                var newQueen = [row,col];
+                queens1(nQueensLeft-1,results,queensSoFar.concat([newQueen]));
+            }
+        }
+    }
+    } else { results.push(queensSoFar); }
+}
