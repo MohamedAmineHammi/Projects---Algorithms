@@ -1,0 +1,30 @@
+N Queens 2
+First, we’re sorry about the previous page’s code. It is a bit below Dojo standards, in performance but also in correctness. Perhaps you spot the bugs already, but first, let’s talk about what this code is trying to do. This is a typical recursive approach for the Eight Queens problem. To identify a location, we use a two-element array. Using a technique known as dynamic programming, the queens1 function calls itself, building up an array of queens in safe locations. When all the required queens are placed, it adds the queensSoFar array to the final results array, and then it backtraces in order to continue.
+
+ 
+
+Good idea, but unfortunately the code is dreadful. To determine all the ways of placing just 5 queens on an 8x8 board, it took more than 30 seconds – and it returned the wrong answer (do you see why?). There are duplicates in the results returned because regardless of where we may have put the previous queen, we always start at the top row when suggesting the next set of safe squares. This may be the right thing if we are creating an allSafeChessSquares function, but here we don’t want that. So, our first change will be to address a defect: once we put down a queen, don’t allow subsequent queens to be placed on earlier rows.
+
+The following code at least functions correctly:
+
+function queens2(nQueensLeft,results,queensSoFar) {
+    if (results === undefined) { results = []; }
+    if (queensSoFar === undefined) { queensSoFar = []; }
+    if (nQueensLeft) {
+        var row = 0;
+        if (queensSoFar.length) {
+            row = queensSoFar[queensSoFar.length - 1][0];
+        }
+        for ( ; row < 8; row++) {
+            for (var col = 0; col < 8; col++) {
+                if (isChessMoveSafe1([row, col], queensSoFar)) {
+                    queens2(nQueensLeft-1, results,queensSoFar.concat([[row,col]]));
+                }
+            }
+        }
+    }
+    else { results.push(queensSoFar); }
+}
+
+
+What else is hiding in here that we should address? Let’s measure performance. How do you think this version will compare to the previous one? The previous one took about 30 seconds to find ways to place 5 queens on an 8x8 board.
